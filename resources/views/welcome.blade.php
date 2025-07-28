@@ -120,7 +120,7 @@
                     <span class="en">Contact Us</span>
                 </a>
                 @if(auth()->check())
-                    <a href="{{ route('dashboard') }}" class="nav-link text-dark mx-3">
+                    <a href="{{ route('user.dashboard') }}" class="nav-link text-dark mx-3">
                         အကောင့်
                         <span class="en">Account</span>
                     </a>

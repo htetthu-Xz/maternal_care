@@ -56,8 +56,18 @@
 
             {{-- Show button to collect AN data --}}
             <a href="{{ route('schedule.an.create', $patient->id) }}" class="btn btn-primary mt-3">
-                <i class="fas fa-plus-circle"></i> Collect AN Data
+                <i class="fas fa-plus-circle"></i> {{ $patient->careSteps->count() < 8 ? ' Collect AN Data' : ' Collect PN Data' }}
             </a>
+                @if ($patient->careSteps->count() > 0)
+                    <a href="{{ route('patients.show', $patient->id) }}" class="btn btn-primary mt-3">
+                        <i class="fas fa-plus-circle"></i> View Care History
+                    </a>
+                @endif
+                @if ($patient->careSteps->count() == 8)
+                    <a href="{{ route('patient.mark-as-delivered', $patient->id) }}" class="btn btn-primary mt-3">
+                        <i class="fas fa-plus-circle"></i>Mark as Delivered
+                    </a>
+                @endif
         </div>
     @else
         {{-- If history not collected, show history collection button --}}

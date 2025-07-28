@@ -29,7 +29,7 @@
                             <td>{{ $patient->user->name ?? 'Unknown' }}</td>
                             <td>{{ $patient->created_at->format('Y-m-d h:i A') }}</td>
                             <td>
-                                <a href="{{ route('today-patients.show', $patient->id) }}" class="btn btn-sm btn-info">View</a>
+                                <a href="{{ route('today-patients.show', $patient->user_id) }}" class="btn btn-sm btn-info">View</a>
                             </td>
                         </tr>
                     @empty
@@ -68,7 +68,7 @@
                             </td>
                             <td>{{ $patient->date }}</td>
                             <td>
-                                <a href="{{ route('today-patients.show', $patient->patient_id) }}" class="btn btn-sm btn-secondary">View</a>
+                                <a href="{{ route('today-patients.show', $patient->user_id) }}" class="btn btn-sm btn-secondary">View</a>
                             </td>
                         </tr>
                     @empty
@@ -103,7 +103,7 @@
                             <td>{{ $patient->user->name ?? 'Unknown' }}</td>
                             <td>{{ $patient->created_at->format('Y-m-d') }}</td>
                             <td>
-                                <a href="{{ route('today-patients.show', $patient->id) }}" class="btn btn-sm btn-dark">View</a>
+                                <a href="{{ route('today-patients.show', $patient->user_id) }}" class="btn btn-sm btn-dark">View</a>
                             </td>
                         </tr>
                     @empty

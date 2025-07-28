@@ -43,6 +43,43 @@
 
     <link rel="stylesheet" href="{{ asset('assets/vendor/libs/apex-charts/apex-charts.css') }}" />
 
+    <style>
+      .layout-page{
+        padding-left: 0px !important;
+      }
+
+      .navbar {
+        background-color: #f8f9fa;
+        padding: 10px;
+      }
+      .navbar-nav {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        justify-content: space-around;
+      }
+      .nav-item {
+        margin: 0 15px;
+      }
+      .nav-link {
+        text-decoration: none;
+        color: #333;
+        padding: 8px 12px;
+        border-radius: 4px;
+      }
+      .nav-link:hover {
+        background-color: #e9ecef;
+      }
+
+      .nav-link.active {
+        background-color: #007bff;
+        color: #fff !important;
+      }
+    </style>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
     @stack('css')
     <!-- Page CSS -->
 
@@ -60,7 +97,7 @@
       <div class="layout-container">
         <!-- Menu -->
 
-        @include('layouts.sidebar')
+        {{-- @include('layouts.sidebar') --}}
         <!-- / Menu -->
 
         <!-- Layout container -->
@@ -109,6 +146,28 @@
 
     <!-- Place this tag in your head or just before your close body tag. -->
     <script async defer src="https://buttons.github.io/buttons.js"></script>
+
+    @if (session('success'))
+        <script>
+            const Toast = Swal.mixin({
+            toast: true,
+            position: "top-end",
+            showConfirmButton: false,
+            timer: 3000,
+            timerProgressBar: true,
+            didOpen: (toast) => {
+              toast.onmouseenter = Swal.stopTimer;
+              toast.onmouseleave = Swal.resumeTimer;
+              toast.style.zIndex = 99999; // Set z-index to upper
+            }
+            });
+            Toast.fire({
+            icon: "success",
+            title: "{{ session('success') }}"
+            });
+        </script>
+        
+    @endif
 
     @stack('js')
   </body>

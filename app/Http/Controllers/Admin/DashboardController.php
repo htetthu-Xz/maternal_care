@@ -31,6 +31,8 @@ class DashboardController extends Controller
 
         $allPatients = Patient::all();
 
+        //dd($returningPatients);
+
         return view('admin.dashboard', compact(
             'todayPatients',
             'returningPatients',

@@ -89,11 +89,8 @@ class MedicalHistoryController extends Controller
 
     public function markAsDelivered(Request $request, Patient $patient)
     {
-        $request->validate([
-            'delivery_date' => 'required|date',
-        ]);
 
-        $deliveryDate = Carbon::parse($request->delivery_date);
+        $deliveryDate = Carbon::now();
         $patient->update(['delivery_date' => $deliveryDate]);
 
         $pncOffsets = [1, 3, 7, 42];

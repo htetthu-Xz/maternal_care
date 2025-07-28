@@ -6,7 +6,7 @@
 
 @section('content')
 <div class="card p-4">
-    <h4 class="mb-4">Collect AN Data for {{ $patient->user->name }}</h4>
+    <h4 class="mb-4">Collect AN and PN Data for {{ $patient->user->name }}</h4>
 
     <form action="{{ route('schedule.an.store') }}" method="POST">
         @csrf

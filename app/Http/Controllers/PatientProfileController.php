@@ -57,4 +57,11 @@ class PatientProfileController extends Controller
     {
         return view('admin.today_patients.show', compact('patient'));
     }
+
+    public function show(Patient $patient)
+    {
+        $AN_PN_Data = $patient->schedules()->take($patient->careSteps->count())->get();
+
+        return view('patient.show', compact('patient', 'AN_PN_Data'));
+    }
 }

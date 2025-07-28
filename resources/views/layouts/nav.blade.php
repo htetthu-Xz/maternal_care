@@ -11,15 +11,12 @@
             <div class="navbar-nav-right d-flex align-items-center" id="navbar-collapse">
               <!-- Search -->
               <div class="navbar-nav align-items-center">
-                <div class="nav-item d-flex align-items-center">
-                  <i class="bx bx-search fs-4 lh-0"></i>
-                  <input
-                    type="text"
-                    class="form-control border-0 shadow-none"
-                    placeholder="Search..."
-                    aria-label="Search..."
-                  />
-                </div>
+                <ul class="navbar-nav">
+                  <li class="nav-item"><a class="nav-link {{ request()->routeIs('admin.dashboard') ? 'active' : '' }}" href="{{ route('admin.dashboard') }}">Dashboard</a></li>
+                  <li class="nav-item"><a class="nav-link " href="">Connections</a></li>
+                  <li class="nav-item"><a class="nav-link " href="">Services</a></li>
+                  <li class="nav-item"><a class="nav-link " href="">Contact</a></li>
+                </ul>
               </div>
               <!-- /Search -->
 

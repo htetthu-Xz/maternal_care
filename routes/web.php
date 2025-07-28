@@ -7,6 +7,7 @@ use App\Http\Controllers\TransferController;
 use App\Http\Controllers\MedicalHistoryController;
 use App\Http\Controllers\PatientProfileController;
 use App\Http\Controllers\Admin\DashboardController;
+use App\Models\MedicalHistory;
 
 Route::get('/', function () {
     return view('welcome');
@@ -21,12 +22,14 @@ Route::middleware('auth')->group(function () {
     Route::post('/patient/profile-form', [PatientProfileController::class, 'submitForm'])->name('patient.profile.submit');
 
     Route::get('/today-patients/{patient}', [PatientProfileController::class, 'showTodayPatient'])->name('today-patients.show');
+    Route::get('mark-as-delivered/{patient}', [MedicalHistoryController::class, 'markAsDelivered'])->name('patient.mark-as-delivered');
 
     Route::get('schedule/an/create/{patient}', [ScheduleController::class, 'createAN'])->name('schedule.an.create');
     Route::post('schedule/an/store', [ScheduleController::class, 'storeAN'])->name('schedule.an.store');
 
     Route::get('/transfer/{patient}/create', [TransferController::class, 'create'])->name('transfer.create');
     Route::post('/transfer', [TransferController::class, 'store'])->name('transfer.store');
+    Route::get('/transfer/{transfer}/show', [TransferController::class, 'show'])->name('transfer.show');
 
 
     Route::middleware(['patient.profile.check'])->group(function () {
@@ -40,7 +43,7 @@ Route::middleware(['auth', 'admin.check'])->group(function () {
     Route::post('/patients/{patient}/medical-history', [MedicalHistoryController::class, 'store'])->name('medical-history.store');
 
     Route::get('admin/dashboard', [DashboardController::class, 'index'])->name('admin.dashboard');
-    Route::get('/patients/{id}', [PatientProfileController::class, 'show'])->name('patients.show');
+    Route::get('/patients/{patient}', [PatientProfileController::class, 'show'])->name('patients.show');
 });
 
 

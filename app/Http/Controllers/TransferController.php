@@ -32,4 +32,10 @@ class TransferController extends Controller
 
         return redirect()->route('admin.dashboard')->with('success', 'Patient transfer recorded successfully.');
     }
+
+    public function show(Transfer $transfer)
+    {
+        $patient = $transfer->patient;
+        return view('admin.transfer.show', compact('transfer', 'patient'));
+    }
 }
