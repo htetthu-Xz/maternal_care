@@ -55,7 +55,7 @@ class PatientProfileController extends Controller
 
     public function showTodayPatient(Patient $patient)
     {
-        return view('admin.today_patients.show', compact('patient'));
+        return view('admin.patients.show', compact('patient'));
     }
 
     public function show(Patient $patient)

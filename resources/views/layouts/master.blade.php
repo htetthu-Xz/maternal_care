@@ -44,9 +44,7 @@
     <link rel="stylesheet" href="{{ asset('assets/vendor/libs/apex-charts/apex-charts.css') }}" />
 
     <style>
-      .layout-page{
-        padding-left: 0px !important;
-      }
+
 
       .navbar {
         background-color: #f8f9fa;
@@ -76,6 +74,12 @@
         background-color: #007bff;
         color: #fff !important;
       }
+
+      .app-brand-text.demo {
+        text-transform: uppercase;
+        font-weight: bold;
+        font-size: 1.2rem !important;
+      }
     </style>
 
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
@@ -97,7 +101,7 @@
       <div class="layout-container">
         <!-- Menu -->
 
-        {{-- @include('layouts.sidebar') --}}
+        @include('layouts.sidebar')
         <!-- / Menu -->
 
         <!-- Layout container -->

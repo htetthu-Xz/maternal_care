@@ -81,7 +81,7 @@ class MedicalHistoryController extends Controller
                 'patient_id' => $patient->id,
                 'type' => 'ANC',
                 'number' => $i + 1,
-                'visit_date' => Carbon::parse($lastMenstruationDate)->addDays($days),
+                'visit_date' => adjustToNearestTuesdayOrThursday($lastMenstruationDate, $days),
                 'visited' => false,
             ]);
         }
@@ -91,6 +91,7 @@ class MedicalHistoryController extends Controller
     {
 
         $deliveryDate = Carbon::now();
+
         $patient->update(['delivery_date' => $deliveryDate]);
 
         $pncOffsets = [1, 3, 7, 42];
@@ -99,8 +100,8 @@ class MedicalHistoryController extends Controller
             Schedule::create([
                 'patient_id' => $patient->id,
                 'type' => 'PNC',
-                'number' => $i + 1,
-                'visit_date' => $deliveryDate->copy()->addDays($days),
+                'number' => 9 + $i,
+                'visit_date' => adjustToNearestTuesdayOrThursday($deliveryDate, $days),
                 'visited' => false,
             ]);
         }

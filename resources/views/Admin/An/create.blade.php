@@ -112,7 +112,7 @@
 
         </div>
 
-        <button type="submit" class="btn btn-success mt-3">Submit AN Data</button>
+        <button type="submit" class="btn btn-success mt-3">Submit Data</button>
     </form>
 </div>
 @endsection

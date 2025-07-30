@@ -1,6 +1,6 @@
 <aside id="layout-menu" class="layout-menu menu-vertical menu bg-menu-theme">
     <div class="app-brand demo">
-        <a href="{{ auth()->user()->role === 'admin' ? route('admin.dashboard') : route('user.dashboard') }}" class="app-brand-link">
+        <a href="{{ auth()->user()->role === 'admin' ? route('admin.dashboard.today') : route('admin.dashboard.today') }}" class="app-brand-link">
             <span class="app-brand-logo demo">
               <img src="{{ asset('images/logo.svg') }}" alt="Maternal Care Logo" class="img-fluid" style="width: 40px; height: 40px;">
             </span>
@@ -12,19 +12,66 @@
         </a>
     </div>
 
+    <hr>
+
     <div class="menu-inner-shadow"></div>
 
         <ul class="menu-inner py-1">
             <!-- Dashboard -->
 
             {{-- @can('patient.profile.check') --}}
-              <li class="menu-item {{ request()->routeIs('*.dashboard') ? 'active' : '' }}">
-                <a href="{{ auth()->user()->role === 'admin' ? route('admin.dashboard') : route('user.dashboard') }}" class="menu-link">
-                  <i class="menu-icon tf-icons bx bx-home-circle"></i>
-                  <div data-i18n="Analytics">Dashboard</div>
-                </a>
-              </li>
-            {{-- @endcan --}}
+              @if (Auth::user()->role === 'admin')
+                  <li class="menu-item {{ request()->routeIs('admin.dashboard.today') ? 'active' : '' }}">
+                    <a href="{{ route('admin.dashboard.today') }}" class="menu-link">
+                      <i class="menu-icon tf-icons bx bxs-calendar-plus"></i>
+                        <div data-i18n="Analytics">ယနေ့ လူနာများ 
+                          @if (!empty($todayPatients) && $todayPatients->count())
+                            <span class="badge bg-danger ms-1">{{ $todayPatients->count() }}</span>
+                          @endif
+                        </div>
+                    </a>
+                  </li>
+                  <li class="menu-item {{ request()->routeIs('admin.dashboard.return') ? 'active' : '' }}">
+                    <a href="{{ route('admin.dashboard.return') }}" class="menu-link">
+                        <i class="menu-icon tf-icons bx bxs-calendar-edit"></i>
+                          <div data-i18n="Analytics">ရက်ချိန်း လူနာများ
+                            @if (!empty($returningPatients) && $returningPatients->count() > 0)
+                              <span class="badge bg-danger ms-1">{{ $returningPatients->count() }}</span>
+                            @endif
+                          </div>
+                    </a>
+                  </li>
+                  <li class="menu-item {{ request()->routeIs('admin.dashboard.all') ? 'active' : '' }}">
+                    <a href="{{ route('admin.dashboard.all') }}" class="menu-link">
+                      <i class="menu-icon tf-icons bx bxs-calendar"></i>
+                      <div data-i18n="Analytics">လူနာများ အားလုံး</div>
+                    </a>
+                  </li>
+                  <li class="menu-item {{ request()->routeIs('conversations.index') ? 'active' : '' }}">
+                    <a href="{{ route('conversations.index') }}" class="menu-link">
+                      <i class="menu-icon tf-icons bx bxs-envelope"></i>
+                      <div data-i18n="Analytics">အကြောင်းကြားစာများ</div>
+                    </a>
+                  </li>
+                  
+                @else
+                  <li class="menu-item {{ request()->routeIs('user.dashboard') ? 'active' : '' }}">
+                    <a href="{{ route('user.dashboard') }}" class="menu-link">
+                      <i class="menu-icon tf-icons bx bxs-envelope"></i>
+                      <div data-i18n="Analytics">Dashboard
+                        <span class="badge bg-danger ms-1">{{ \App\Models\Message::UserUnreadCount() }}</span>
+                      </div>
+                    </a>
+                  </li>
+                  <li class="menu-item {{ request()->routeIs('conversations.index') ? 'active' : '' }}">
+                    <a href="{{ route('conversations.index') }}" class="menu-link">
+                      <i class="menu-icon tf-icons bx bx-home-alt"></i>
+                      <div data-i18n="Analytics">အကြောင်းကြားစာများ
+                      </div>
+                    </a>
+                  </li>
+                @endif
+                  {{-- @endcan --}}
 
             <!-- Layouts -->
             {{-- <li class="menu-item">

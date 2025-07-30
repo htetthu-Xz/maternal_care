@@ -12,10 +12,7 @@
               <!-- Search -->
               <div class="navbar-nav align-items-center">
                 <ul class="navbar-nav">
-                  <li class="nav-item"><a class="nav-link {{ request()->routeIs('admin.dashboard') ? 'active' : '' }}" href="{{ route('admin.dashboard') }}">Dashboard</a></li>
-                  <li class="nav-item"><a class="nav-link " href="">Connections</a></li>
-                  <li class="nav-item"><a class="nav-link " href="">Services</a></li>
-                  <li class="nav-item"><a class="nav-link " href="">Contact</a></li>
+                  <li class="nav-item"><h2 class="mb-0">Maternal Care System</h2></li>
                 </ul>
               </div>
               <!-- /Search -->

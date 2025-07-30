@@ -34,4 +34,18 @@ class Patient extends Model
     {
         return $this->hasMany(Transfer::class);
     }
+
+    public function conversations()
+    {
+        return $this->hasMany(Conversation::class);
+    }
+
+    public static function getVisitDate($patient)
+    {
+        $careStepCount = $patient->careSteps->count();
+
+        $schedule = $patient->schedules()->where('number', $careStepCount + 1)
+            ->first();
+        return $schedule->visit_date ?? null;
+    }
 }
