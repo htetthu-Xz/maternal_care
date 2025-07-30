@@ -59,7 +59,7 @@ class ConversationController extends Controller
     }
 
     // Doctor sends initial reminder (creates conversation)
-    public function remindPatient(Patient $patient)
+    public function remindPatient(Patient $patient, Request $request)
     {
         $conversation = Conversation::firstOrCreate(
             ['patient_id' => $patient->id, 'doctor_id' => Auth::id()]
@@ -68,7 +68,7 @@ class ConversationController extends Controller
         Message::create([
             'conversation_id' => $conversation->id,
             'sender_id' => Auth::id(),
-            'message' => $request->message,
+            'message' => 'You missed your scheduled appointment. Please reply with your reason.',
             'read' => false,
         ]);
 
