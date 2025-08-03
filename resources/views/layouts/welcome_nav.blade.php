@@ -12,7 +12,7 @@
         ဆက်သွယ်ရန်
     </a>
     @if(auth()->check())
-        <a href="{{ route('user.dashboard') }}" class="nav-link text-dark mx-3" style="flex-direction: row !important;">
+        <a href="{{ route('patient.dashboard') }}" class="nav-link text-dark mx-3" style="flex-direction: row !important;">
             <i class='bx bxs-user mx-2'></i>
             {{ auth()->user()->name }}
             အကောင့်
