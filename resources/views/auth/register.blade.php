@@ -58,13 +58,19 @@
         <div class="authentication-inner">
           <!-- Register Card -->
           <div class="card">
+              <div class="card-header">
+                <div class="app-brand flex-column justify-content-center mb-0">
+                  <img src="{{ asset('images/logo.svg') }}" alt="Logo" class="logo mb-3" width="50" height="50">
+                  <span class="app-brand-text text-body fw-bolder mb-1 text-center">ကိုယ်ဝန်ဆောင်မိခင်နှင့်ကလေးစောင့်ရှောက်မှု <br> စနစ် မှကြိုဆိုပါသည်။</span>
+                </div>
+              </div>
             <div class="card-body">
               <!-- Logo -->
 
               <form id="formAuthentication" class="mb-3" method="POST" action="{{ route('register') }}">
                 @csrf
                 <div class="mb-3">
-                  <label for="patient_name" class="form-label">Patient Name</label>
+                  <label for="patient_name" class="form-label">မိခင် အမည်</label>
                   <input
                     type="text"
                     class="form-control"
@@ -81,7 +87,7 @@
                 @enderror
 
                 <div class="mb-3">
-                  <label for="email" class="form-label">Email</label>
+                  <label for="email" class="form-label">အီးမေးလ်</label>
                   <input type="text" class="form-control" id="email" name="email" value="{{ old('email') }}" placeholder="Enter your email" />
                 </div>
                 @error('email')
@@ -89,7 +95,7 @@
                 @enderror
 
                 <div class="mb-3">
-                  <label for="age" class="form-label">Age</label>
+                  <label for="age" class="form-label">မိခင် အသက်</label>
                   <input type="text" class="form-control" id="age" name="age" value="{{ old('age') }}" placeholder="Enter your age" />
                 </div>
                 @error('age')
@@ -97,15 +103,25 @@
                 @enderror
 
                 <div class="mb-3">
-                  <label for="blood_group" class="form-label">Blood Group</label>
-                  <input type="text" class="form-control" id="blood_group" name="blood_group" value="{{ old('blood_group') }}" placeholder="Enter your blood group" />
+                  <label for="blood_group" class="form-label">မိခင် သွေးအုပ်စု</label>
+                  <select name="blood_group" id="blood_group" class="form-select">
+                    <option value="">Select blood group</option>
+                    <option value="A+" {{ old('blood_group') == 'A+' ? 'selected' : '' }}>A+</option>
+                    <option value="A-" {{ old('blood_group') == 'A-' ? 'selected' : '' }}>A-</option>
+                    <option value="B+" {{ old('blood_group') == 'B+' ? 'selected' : '' }}>B+</option>
+                    <option value="B-" {{ old('blood_group') == 'B-' ? 'selected' : '' }}>B-</option>
+                    <option value="AB+" {{ old('blood_group') == 'AB+' ? 'selected' : '' }}>AB+</option>
+                    <option value="AB-" {{ old('blood_group') == 'AB-' ? 'selected' : '' }}>AB-</option>
+                    <option value="O+" {{ old('blood_group') == 'O+' ? 'selected' : '' }}>O+</option>
+                    <option value="O-" {{ old('blood_group') == 'O-' ? 'selected' : '' }}>O-</option>
+                  </select>
                 </div>
                 @error('blood_group')
                     <div class="alert alert-danger">{{ $message }}</div>
                 @enderror
 
                 <div class="mb-3">
-                  <label for="address" class="form-label">Address</label>
+                  <label for="address" class="form-label">နေရပ် လိပ်စာ</label>
                   <input type="text" class="form-control" id="address" name="address" value="{{ old('address') }}" placeholder="Enter your address" />
                 </div>
 
@@ -114,7 +130,7 @@
                 @enderror
 
                 <div class="mb-3 form-password-toggle">
-                  <label class="form-label" for="password">Password</label>
+                  <label class="form-label" for="password">စကားဝှက်</label>
                   <div class="input-group input-group-merge">
                     <input
                       type="password"
@@ -132,13 +148,13 @@
                   </div>
                 </div>
 
-                <button class="btn btn-primary d-grid w-100">Sign up</button>
+                <button class="btn btn-primary d-grid w-100">စာရင်းသွင်းရန်</button>
               </form>
 
               <p class="text-center">
-                <span>Already have an account?</span>
+                <span>အကောင့်ရှိပါသလား?</span>
                 <a href="{{ route('login') }}" class="d-flex align-items-center justify-content-center">
-                  <span>Sign in instead</span>
+                  <span>ဝင်ရန်</span>
                 </a>
               </p>
             </div>

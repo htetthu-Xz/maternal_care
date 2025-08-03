@@ -64,4 +64,21 @@ class PatientProfileController extends Controller
 
         return view('patient.show', compact('patient', 'AN_PN_Data'));
     }
+
+    public function showAnPn()
+    {
+        $user = Auth::user();
+        $patient = $user->patient;
+
+        $schedules = $patient->schedules()->take($patient->careSteps->count())->get();
+
+        return view('patient.my_care_history', compact('schedules'));
+    }
+
+    public function showHistory($id)
+    {
+        $schedule = Auth::user()->patient->schedules()->findOrFail($id);
+
+        return view('patient.historyShow', compact('schedule'));
+    }
 }

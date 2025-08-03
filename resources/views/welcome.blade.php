@@ -2,10 +2,11 @@
 <html lang="my">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Maternal Care System</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maternal Care System</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="{{ asset('assets/vendor/fonts/boxicons.css') }}" />
   <style>
     body {
       font-family: "Myanmar Text", sans-serif;
@@ -80,23 +81,28 @@
         position: relative;
     }
     
-    .dept-1 { background-color: #2c5aa0; }
+    .dept-1 { background-color: #0D6EFD; }
     .dept-2 { background-color: #c53030; }
-    .dept-3 { background-color: #0891b2; }
-    .dept-4 { background-color: #059669; }
+    .dept-3 { background-color: #f7fb02; }
+    .dept-4 { background-color: #10ac0b; }
     .dept-5 { background-color: #7c3aed; }
-    .dept-6 { background-color: #dc2626; }
+    .dept-6 { background-color: #08a880; }
+
+    .active {
+        color: #0d6efd !important;
+        font-weight: bold !important;
+    }
   </style>
 </head>
 
 <body>
   <section class="text-center bg-primary text-white py-4">
-    <div class="d-flex justify-content-center align-items-center p-2">
-        <img src="{{ asset('images/logo.svg') }}" alt="Logo" class="logo mb-3">
+    <div class="d-flex flex-column justify-content-center align-items-center p-2">
+        <img src="{{ asset('images/logo.svg') }}" alt="Logo" class="logo mb-3" width="100" height="100">
         <div class="mx-4">
             <h4 class="mb-3">ကျန်းမာရေးဝန်ကြီးဌာန</h4>
             <h5 class="mb-2">မြိုနယ်ပြည်သူကျန်းမာရေး ဉီစီးဌာန (ဟင်္သာတ)</h5>
-            <p class="mb-0">Maternal Care Support System - Hinthada</p>
+
         </div>
     </div>
   </section>
@@ -106,31 +112,7 @@
     <div class="carousel-inner">
         <!-- Transparent nav overlay, absolute positioned over carousel images -->
         <nav class="py-2 position-absolute top-0 start-0 w-100" style="background: rgba(255,255,255,0.7); z-index: 2;">
-            <div class="container d-flex justify-content-center gap-5">
-                <a href="#" class="nav-link text-dark mx-3">
-                    ပင်မစာမျက်နှာ
-                    <span class="en">Home</span>
-                </a>
-                <a href="#" class="nav-link text-dark mx-3">
-                    ကျန်းမာရေးအသိပညာပေးများ
-                    <span class="en">Health Education</span>
-                </a>
-                <a href="#" class="nav-link text-dark mx-3">
-                    ဆက်သွယ်ရန်
-                    <span class="en">Contact Us</span>
-                </a>
-                @if(auth()->check())
-                    <a href="{{ route('user.dashboard') }}" class="nav-link text-dark mx-3">
-                        အကောင့်
-                        <span class="en">Account</span>
-                    </a>
-                @else
-                    <a href="{{ route('login') }}" class="nav-link text-dark mx-3">
-                        အကောင့်ဖွင့်ရန်နှင့်ဝင်ရန်
-                        <span class="en">Plans</span>
-                    </a>
-                @endif
-            </div>
+            @include('layouts.welcome_nav')
         </nav>
         <div class="carousel-item active">
             <img src="{{ asset('images/hero1.jpg') }}" class="d-block w-100 carousel-img" alt="Mother 1">

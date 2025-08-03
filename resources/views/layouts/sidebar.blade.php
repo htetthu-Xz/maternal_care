@@ -1,6 +1,6 @@
 <aside id="layout-menu" class="layout-menu menu-vertical menu bg-menu-theme">
     <div class="app-brand demo">
-        <a href="{{ auth()->user()->role === 'admin' ? route('admin.dashboard.today') : route('admin.dashboard.today') }}" class="app-brand-link">
+        <a href="{{ auth()->user()->role === 'admin' ? route('admin.dashboard.today') : route('patient.dashboard') }}" class="app-brand-link">
             <span class="app-brand-logo demo">
               <img src="{{ asset('images/logo.svg') }}" alt="Maternal Care Logo" class="img-fluid" style="width: 40px; height: 40px;">
             </span>
@@ -52,25 +52,40 @@
                       <i class="menu-icon tf-icons bx bxs-envelope"></i>
                       <div data-i18n="Analytics">အကြောင်းကြားစာများ</div>
                     </a>
-                  </li>
-                  
+                  </li>                  
                 @else
-                  <li class="menu-item {{ request()->routeIs('user.dashboard') ? 'active' : '' }}">
-                    <a href="{{ route('user.dashboard') }}" class="menu-link">
-                      <i class="menu-icon tf-icons bx bxs-envelope"></i>
+                  <li class="menu-item {{ request()->routeIs('patient.dashboard') ? 'active' : '' }}">
+                    <a href="{{ route('patient.dashboard') }}" class="menu-link">
+                      <i class="menu-icon tf-icons bx bx-home-alt"></i>
                       <div data-i18n="Analytics">Dashboard
-                        <span class="badge bg-danger ms-1">{{ \App\Models\Message::UserUnreadCount() }}</span>
                       </div>
                     </a>
                   </li>
-                  <li class="menu-item {{ request()->routeIs('conversations.index') ? 'active' : '' }}">
-                    <a href="{{ route('conversations.index') }}" class="menu-link">
-                      <i class="menu-icon tf-icons bx bx-home-alt"></i>
+                  <li class="menu-item {{ request()->routeIs('patient.my-care-history') ? 'active' : '' }}">
+                    <a href="{{ route('patient.my-care-history') }}" class="menu-link">
+                      <i class="menu-icon tf-icons bx bx-plus-medical"></i>
+                      <div data-i18n="Analytics">Care History
+                      </div>
+                    </a>
+                  </li>
+                  <li class="menu-item {{ request()->routeIs('patient.conversations.index') ? 'active' : '' }}">
+                    <a href="{{ route('patient.conversations.index') }}" class="menu-link">
+                      <i class="menu-icon tf-icons bx bxs-envelope"></i>
                       <div data-i18n="Analytics">အကြောင်းကြားစာများ
                       </div>
                     </a>
                   </li>
                 @endif
+
+                <li class="menu-item">
+                  <a href="" class="menu-link" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+                      <form action="{{ route('logout') }}" method="POST" id="logout-form">
+                        @csrf
+                      </form>
+                      <i class="bx bx-power-off me-2"></i>
+                      <span class="align-middle">Log Out</span>
+                  </a>
+                </li>
                   {{-- @endcan --}}
 
             <!-- Layouts -->

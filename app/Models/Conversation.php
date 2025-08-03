@@ -28,4 +28,12 @@ class Conversation extends Model
     {
         return $this->belongsTo(User::class, 'doctor_id');
     }
+
+    public function unreadMessagesForPatient($userId)
+    {
+        return $this->messages()
+            ->where('sender_id', $userId)
+            ->where('read', false)
+            ->count();
+    }
 }

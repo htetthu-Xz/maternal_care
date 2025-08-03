@@ -68,7 +68,7 @@ class ConversationController extends Controller
         Message::create([
             'conversation_id' => $conversation->id,
             'sender_id' => Auth::id(),
-            'message' => 'You missed your scheduled appointment. Please reply with your reason.',
+            'message' => 'You missed your scheduled appointment. Please reply with your reason.6',
             'read' => false,
         ]);
 

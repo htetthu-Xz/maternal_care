@@ -58,18 +58,23 @@
         <div class="authentication-inner">
           <!-- Register -->
           <div class="card">
+            <div class="card-header">
+              <div class="app-brand flex-column justify-content-center mb-0">
+                <img src="{{ asset('images/logo.svg') }}" alt="Logo" class="logo mb-3" width="50" height="50">
+                <span class="app-brand-text text-body fw-bolder mb-1 text-center">ကိုယ်ဝန်ဆောင်မိခင်နှင့်ကလေးစောင့်ရှောက်မှု <br> စနစ် မှကြိုဆိုပါသည်။</span>
+              </div>
+            </div>
             <div class="card-body">
               <form id="formAuthentication" class="mb-3" method="POST" action="{{ route('login') }}">
                 @csrf
                 <div class="mb-3">
-                  <label for="email" class="form-label">Email or Username</label>
+                  <label for="email" class="form-label">အီးမေးလ်</label>
                   <input
                     type="text"
                     class="form-control"
                     id="email"
                     name="email"
                     value="{{ old('email') }}"
-                    placeholder="Enter your email or username"
                     autofocus
                   />
                 </div>
@@ -80,10 +85,10 @@
                 @endif
                 <div class="mb-3 form-password-toggle">
                   <div class="d-flex justify-content-between">
-                    <label class="form-label" for="password">Password</label>
-                    <a href="auth-forgot-password-basic.html">
-                      <small>Forgot Password?</small>
-                    </a>
+                    <label class="form-label" for="password">စကားဝှက်</label>
+                    {{-- <a href="auth-forgot-password-basic.html">
+                      <small>စကားဝှက်မေ့နေပါသလား?</small>
+                    </a> --}}
                   </div>
 
                   <div class="input-group input-group-merge">
@@ -111,14 +116,14 @@
                   </div>
                 </div>
                 <div class="mb-3">
-                  <button class="btn btn-primary d-grid w-100" type="submit">Sign in</button>
+                  <button class="btn btn-primary d-grid w-100" type="submit">ဝင်ရန်</button>
                 </div>
               </form>
 
               <p class="text-center">
-                <span>New on our platform?</span>
+                <span>အကောင့်မရှိသေးပါလား?</span>
                 <a href="{{ route('register') }}">
-                  <span>Create an account</span>
+                  <span>အကောင့်ဖွင့်ရန်</span>
                 </a>
               </p>
             </div>
