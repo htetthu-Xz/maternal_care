@@ -142,6 +142,48 @@
                     <div class="chapter-desc">မွေးဖွားခါနီးရှေ့ပြေးလက်က္ခဏာများ</div>
                 </div>
             </a>
+            <a href="{{ route('knowledges.chapter7') }}" class="list-group-item list-group-item-action d-flex align-items-start">
+                <img src="{{ asset('images/title.png') }}" alt="icon" class="me-3 mt-1" width="40">
+                <div>
+                    <div class="chapter-title">အခန်း ၇</div>
+                    <div class="chapter-desc">မွေးဖွားခါစဉ် အန္တရာယ်လက္ခဏာများ</div>
+                </div>
+            </a>
+            <a href="{{ route('knowledges.chapter8') }}" class="list-group-item list-group-item-action d-flex align-items-start">
+                <img src="{{ asset('images/title.png') }}" alt="icon" class="me-3 mt-1" width="40">
+                <div>
+                    <div class="chapter-title">အခန်း ၈</div>
+                    <div class="chapter-desc">မွေးဖွားခါပြီးမိခင်များအတွက် အန္တရာယ်လက္ခဏာများ</div>
+                </div>
+            </a>
+            <a href="{{ route('knowledges.chapter9') }}" class="list-group-item list-group-item-action d-flex align-items-start">
+                <img src="{{ asset('images/title.png') }}" alt="icon" class="me-3 mt-1" width="40">
+                <div>
+                    <div class="chapter-title">အခန်း ၉</div>
+                    <div class="chapter-desc">မွေးဖွားခါပြီးမိခင်များ ဆောင်ရန်အချက်များ</div>
+                </div>
+            </a>
+            <a href="{{ route('knowledges.chapter10') }}" class="list-group-item list-group-item-action d-flex align-items-start">
+                <img src="{{ asset('images/title.png') }}" alt="icon" class="me-3 mt-1" width="40">
+                <div>
+                    <div class="chapter-title">အခန်း ၁၀</div>
+                    <div class="chapter-desc">မွေးဖွားခါပြီးမိခင်များအတွက် ရှောင်ရန်အချက်များ</div>
+                </div>
+            </a>
+            <a href="{{ route('knowledges.chapter11') }}" class="list-group-item list-group-item-action d-flex align-items-start">
+                <img src="{{ asset('images/title.png') }}" alt="icon" class="me-3 mt-1" width="40">
+                <div>
+                    <div class="chapter-title">အခန်း ၁၁</div>
+                    <div class="chapter-desc">သားဆက်ခြားခြင်း</div>
+                </div>
+            </a>
+            <a href="{{ route('knowledges.chapter12') }}" class="list-group-item list-group-item-action d-flex align-items-start">
+                <img src="{{ asset('images/title.png') }}" alt="icon" class="me-3 mt-1" width="40">
+                <div>
+                    <div class="chapter-title">အခန်း ၁၂</div>
+                    <div class="chapter-desc">ကိုဗစ်-၁၉ (COVID-19) နှင့် မိခင်နှင့်ကလေးကျန်းမာရေး</div>
+                </div>
+            </a>
 
         </div>
     </div>

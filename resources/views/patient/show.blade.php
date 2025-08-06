@@ -18,6 +18,7 @@
         </h2>
         <div class="row w-auto">
             <div class="table-responsive">
+                <h4>ANC Data</h4>
                 <table class="table table-bordered mt-4">
                     <thead>
                         <tr>
@@ -42,7 +43,7 @@
                         </tr>
                     </thead>
                     <tbody>
-                        @foreach($AN_PN_Data as $an)
+                        @foreach($AN_Data as $an)
                             <tr>
                                 <td>{{ $loop->index + 1 }}</td>
                                 <td>{{ Carbon\Carbon::parse($an->visit_date)->format('d/m/Y') }}</td>
@@ -59,6 +60,58 @@
                                 <td>{{ $an->sifalip == 1 ? 'Yes' : 'No' }}</td>
                                 <td>{{ $an->iron_folate_tablets == 1 ? 'Yes' : 'No' }}</td>
                                 <td>{{ ($an->MedicalHistory && $an->MedicalHistory->tt_vaccine_2_date) ? 'Yes' : 'No' }}</td>
+                                <td>{{ $an->symptoms_and_treatment }}</td>
+                                <td>{{ $an->is_transfer == 1 ? 'Yes' : 'No' }}</td>
+                                <td>
+                                    @if($an->is_transfer)
+                                        <a href="{{ route('transfer.show', Transfer::where('patient_id', $patient->id)->whereDate('created_at', $an->created_at)->first()) }}" class="btn btn-sm btn-info">View</a>
+                                    @else
+                                        -
+                                    @endif
+                                </td>
+                            </tr>
+                        @endforeach
+                    </tbody>
+                </table>
+
+                <h4 class="mt-4">PNC Data</h4>
+                <table class="table table-bordered mt-4">
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Visit Date</th>
+                            <th>သွေးအားနည်းခြင်း</th>
+                            <th>သွေးပေါင်ချိန်</th>
+                            <th>ကိုယ်အပူချိန်</th>
+                            <th>သားမြတ် နိုးသီးခေါင်း</th>
+                            <th>သားအိမ်လုံးမာခြင်း</th>
+                            <th>မီးနေသွေးပုံမှန်ဆင်းခြင်း</th>
+                            <th>မိန်းမကိုယ်နောက်ပိုင် အနာကျက်ခြင်း</th>
+                            <th>Vitamin A</th>
+                            <th>Vitamin B1</th>
+                            <th>သုံးစွဲသော သားဆက်ခြားနည်း</th>
+                            <th>သံဓါက်ဖောလိတ်ဆေးပြားပေးခြင်းရှိမရှိ</th>
+                            <th>ရောဂါလက္ခဏာနဲ့ ကုသမှု</th>
+                            <th>ညွန်ပို့ခြင်းရှိမရှိ</th>
+                            <th>Transfer Data</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach($PN_Data as $an)
+                            <tr>
+                                <td>{{ $loop->index + 1 }}</td>
+                                <td>{{ Carbon\Carbon::parse($an->visit_date)->format('d/m/Y') }}</td>
+                                <td>{{ $an->anemia }}</td>
+                                <td>{{ $an->blood_pressure }}</td>
+                                <td>{{ $an->fever }}</td>
+                                <td>{{ $an->nipples == 1 ? 'Yes' : 'No' }}</td>
+                                <td>{{ $an->hard_uterus == 1 ? 'Yes' : 'No' }}</td>
+                                <td>{{ $an->is_regular_menstruation == 1 ? 'Yes' : 'No' }}</td>
+                                <td>{{ $an->is_injury_heal == 1 ? 'Yes' : 'No' }}</td>
+                                <td>{{ $an->vitamin_a }}</td>
+                                <td>{{ $an->vitamin_b_one }}</td>
+                                <td>{{ $an->birth_control }}</td>
+                                <td>{{ $an->iron_folate_tablets == 1 ? 'Yes' : 'No' }}</td>
                                 <td>{{ $an->symptoms_and_treatment }}</td>
                                 <td>{{ $an->is_transfer == 1 ? 'Yes' : 'No' }}</td>
                                 <td>

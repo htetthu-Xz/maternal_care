@@ -60,9 +60,11 @@ class PatientProfileController extends Controller
 
     public function show(Patient $patient)
     {
-        $AN_PN_Data = $patient->schedules()->take($patient->careSteps->count())->get();
-
-        return view('patient.show', compact('patient', 'AN_PN_Data'));
+        $an_count = $patient->careSteps()->where('type', 'ANC')->count();
+        $pn_count = $patient->careSteps()->where('type', 'PNC')->count();
+        $AN_Data = $patient->schedules()->where('type', 'ANC')->take($an_count)->get();
+        $PN_Data = $patient->schedules()->where('type', 'PNC')->take($pn_count)->get();
+        return view('patient.show', compact('patient', 'AN_Data', 'PN_Data'));
     }
 
     public function showAnPn()

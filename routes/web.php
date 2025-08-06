@@ -57,6 +57,26 @@ Route::get('knowledges/chapter7', function () {
     return view('knowledges.ch7');
 })->name('knowledges.chapter7');
 
+Route::get('knowledges/chapter8', function () {
+    return view('knowledges.ch8');
+})->name('knowledges.chapter8');
+
+Route::get('knowledges/chapter9', function () {
+    return view('knowledges.ch9');
+})->name('knowledges.chapter9');
+
+Route::get('knowledges/chapter10', function () {
+    return view('knowledges.ch10');
+})->name('knowledges.chapter10');
+
+Route::get('knowledges/chapter11', function () {
+    return view('knowledges.ch11');
+})->name('knowledges.chapter11');
+
+Route::get('knowledges/chapter12', function () {
+    return view('knowledges.ch12');
+})->name('knowledges.chapter12');
+
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');

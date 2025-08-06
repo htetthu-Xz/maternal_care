@@ -103,7 +103,7 @@
     <section class="chapter-list py-4 mx-auto">
         <h5 class="fw-bold text-primary mb-4 text-center">
             <i class="bx bx-book-open"></i>
-            အခန်း ၇ - မွေးဖွားခါစဉ် အန္တရာယ်လက္ခဏာများ
+            အခန်း ၉ - မွေးဖွားပြီးမီခင် ဆောင်ရန်အချက်များ
         </h5>
 
         <div class="mb-4">
@@ -112,29 +112,28 @@
                     <span class="fs-4 text-success"><i class="bx bx-check-circle"></i></span>
                     <div class="flex-grow-1">
                         <div class="chapter-desc mb-2">
-                            အောက်ပါလက္ခဏာများသည် အန္တရယ်လက္ခဏာများ ဖြစ်သဖြင့် ဆေးရုံ/ဆေးခန်း/ကျန်းမာရေးဌာနသို့ နေ့ညမဆိုင်းသွားပါ။ 
+                            <ul>
+                                <li>တစ်ကိုယ်ရေ သန့်ရှင်းရေးဂရုစိုက်ပါ</li>
+                                <li>မိန်းမကိုယ်မျ အရည်များဆင်းသည့်အတွက် သန့်ရှင်းသော အဝတ်စ သို့မဟုတ် အမျိုးသမီးလစဉ်သုံးပစ္စည်းသုံးပါ</li>
+                                <li>မန်းမကိုယ်အား သန့်ရှင်းစွာထားပါ အိမ်သာတက်ပြီးတိုင်း ရေဖြင့်ဆေးပါ</li>
+                                <li>နို့တိုက်မိခင်များ အစားမရှောင်ပါနဲ့၊ ကိုယ်ဝန်ဆောင်စဉ်ကထက်ပိုစားပါ။</li>
+                                <li>နိုတိုက်မိခင်များ အစားနှစ်နပ် သို့မဟုတ် မုန့်နှစ်ကြိမ်စားပါ။</li>
+                                <li>တက်ကျွမ်းသော ကျန်းမာရေးသောင့်ရှောက်မှု ပေးသူများက ညွန်ကြားသည့်အတိငင်းဆေးများကိုသောက်ပါ။</li>
+                                <li>သံဓါက် ဖောလစ်အက်စစ် ဗီတာမင် ဘီဝမ်းဆေးများ ဗျတာမင်နှင့်သတ္ထုဓါက်မျိုးစုံပါသောအားဆေး ဆက်လက်သောက်ပါ။</li>
+                                <li>အင်းအားပြည့် ဗီတာမင်အေ အားဆေးတစ်ကြိမ်သောက်ပါ</li>
+                            </ul>
                         </div>
-                        <div class="chapter-desc mb-2">
-                            <small class="text-secondary">
-                                <ul>
-                                    <li>ရေမွှာပေါက်ပြီး (၆) နာရီကြာသည့်တိုင်အောင် ဗိုက်မနာလျှင်</li>
-                                    <li>ဗိုက်နာခြင်း (၁၀)နာရီကျော်သည်အထိ မမွေးသေးလျှင်</li>
-                                    <li>မွေးပြီးသွေးများဆင်းလျှင် (သို့) (၅)မိနစ် အတွင်း အောက်ခံပစ္စည်းများ/အဝတ်တွင်သွေးများရွဲနစ်နေလျှင်</li>
-                                    <li>ကလေးထွက်ပြီး တစ်နာရီ ကြာသည်အထိ အချင်းမကျလျှင်</li>
-                                </ul>
-                            </small>
-                        </div> 
                     </div>
                 </div>
             </div>
         </div>
 
         <div class="d-flex justify-content-between align-items-center text-muted small mt-3">
-            <a href="{{ route('knowledges.chapter6') }}" class="btn btn-outline-primary btn-sm">
+            <a href="{{ route('knowledges.chapter8') }}" class="btn btn-outline-primary btn-sm">
                 <i class="bx bx-left-arrow-alt"></i> ရှေစာမျက်နှာ
             </a>
-            <span><i class="bx bx-book"></i> 7 of 12</span>
-            <a href="{{ route('knowledges.chapter8') }}" class="btn btn-outline-primary btn-sm">
+            <span><i class="bx bx-book"></i> 9 of 12</span>
+            <a href="{{ route('knowledges.chapter10') }}" class="btn btn-outline-primary btn-sm">
                 နောက်စာမျက်နှာ <i class="bx bx-right-arrow-alt"></i>
             </a>
         </div>

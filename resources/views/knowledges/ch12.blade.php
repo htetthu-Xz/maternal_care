@@ -103,7 +103,7 @@
     <section class="chapter-list py-4 mx-auto">
         <h5 class="fw-bold text-primary mb-4 text-center">
             <i class="bx bx-book-open"></i>
-            အခန်း ၇ - မွေးဖွားခါစဉ် အန္တရာယ်လက္ခဏာများ
+            အခန်း ၁၂ - Covid-19 နှင့် မိခင်နှင့်ကလေး ကျန်းမာရေး
         </h5>
 
         <div class="mb-4">
@@ -112,15 +112,15 @@
                     <span class="fs-4 text-success"><i class="bx bx-check-circle"></i></span>
                     <div class="flex-grow-1">
                         <div class="chapter-desc mb-2">
-                            အောက်ပါလက္ခဏာများသည် အန္တရယ်လက္ခဏာများ ဖြစ်သဖြင့် ဆေးရုံ/ဆေးခန်း/ကျန်းမာရေးဌာနသို့ နေ့ညမဆိုင်းသွားပါ။ 
+                            ကိုယ်ဝန်ဆောင်နှင့် နို့တိုက်မိခင်များမနေဖျင့် ရောဂါကူစက်မခံရအောင် အခြားသူများကဲ့သို့ ကိုဗစ်-၁၉ ကာကွယ်သည့် နည်းလမ်းများကိုလက်နာဆောင်ရွက်ဖို့လိုပါသည်။
                         </div>
                         <div class="chapter-desc mb-2">
                             <small class="text-secondary">
                                 <ul>
-                                    <li>ရေမွှာပေါက်ပြီး (၆) နာရီကြာသည့်တိုင်အောင် ဗိုက်မနာလျှင်</li>
-                                    <li>ဗိုက်နာခြင်း (၁၀)နာရီကျော်သည်အထိ မမွေးသေးလျှင်</li>
-                                    <li>မွေးပြီးသွေးများဆင်းလျှင် (သို့) (၅)မိနစ် အတွင်း အောက်ခံပစ္စည်းများ/အဝတ်တွင်သွေးများရွဲနစ်နေလျှင်</li>
-                                    <li>ကလေးထွက်ပြီး တစ်နာရီ ကြာသည်အထိ အချင်းမကျလျှင်</li>
+                                    <li>ရေနှင့် ဆပ်ပြကိုအသုံးပြု၍ လက်ကိုစက္ကန့် ၂၀ ခန့်ကြားအောင်မကြာခဏစနစ်တကျ ဆေးကြောပါ။ ကလေးငယ်အားမကိုင်တွယ်ခင်နှင့်ကိုင်တွအပြီး လက်ကိုစနစ်တကျဆေးကြောပါ။</li>
+                                    <li>အခြားသူများနှင့် အနည်းဆုံး ၆ပေအကွာမှ စကားပြောပါ</li>
+                                    <li>အပြင်သိုထွက်သည်အခါ ပါးစပ်နှင့်နှာခေါင်းစည်း တပ်ဆင်ပါ။ြစ်နိုင်ပါက မျက်နှာအကာ ကိုတပ်ဆင်ပါ။</li>
+                                    <li>ဖျားခြင်းချောင်းဆိုးခြင်း အသက်ရှူရခတ်ခြင်း၊ ရပ်တရက် အနံအရသာပြောက်ဆုံးခြင်း  စသည့် ကိုဗစ်-၁၉ ရောဂါလက္ခဏာများတွေရှိရပါက ဆေးဝါးကုသမှုအမြန်ဆုံးခံယူပါ။</li>
                                 </ul>
                             </small>
                         </div> 
@@ -130,13 +130,11 @@
         </div>
 
         <div class="d-flex justify-content-between align-items-center text-muted small mt-3">
-            <a href="{{ route('knowledges.chapter6') }}" class="btn btn-outline-primary btn-sm">
+            <a href="{{ route('knowledges.chapter11') }}" class="btn btn-outline-primary btn-sm">
                 <i class="bx bx-left-arrow-alt"></i> ရှေစာမျက်နှာ
             </a>
-            <span><i class="bx bx-book"></i> 7 of 12</span>
-            <a href="{{ route('knowledges.chapter8') }}" class="btn btn-outline-primary btn-sm">
-                နောက်စာမျက်နှာ <i class="bx bx-right-arrow-alt"></i>
-            </a>
+            <span><i class="bx bx-book"></i> 10 of 12</span>
+
         </div>
     </section>
 

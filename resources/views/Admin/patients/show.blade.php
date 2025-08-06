@@ -57,7 +57,7 @@
             {{-- Show button to collect AN data --}}
 
             @if ($patient->careSteps->count() != 12)
-                <a href="{{ route('schedule.an.create', $patient->id) }}" class="btn btn-primary mt-3">
+                <a href="{{ route('schedule.an.create', [$patient->id]) }}" class="btn btn-primary mt-3">
                     <i class="fas fa-plus-circle"></i> {{ $patient->careSteps->count() < 8 ? ' Collect AN Data' : ' Collect PN Data' }}
                 </a>
             @endif
