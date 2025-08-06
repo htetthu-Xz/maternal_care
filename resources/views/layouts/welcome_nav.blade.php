@@ -3,7 +3,7 @@
         <i class='bx bxs-home mx-2'></i>
         ပင်မစာမျက်နှာ
     </a>
-    <a href="#" class="nav-link text-dark mx-3" style="flex-direction: row !important;">
+    <a href="{{ route('knowledges.index') }}" class="nav-link text-dark mx-3 {{ request()->routeIs('knowledges.*') ? 'active text-primary' : '' }}" style="flex-direction: row !important;">
         <i class='bx bx-news mx-2'></i>
         ကျန်းမာရေးအသိပညာပေးများ
     </a>

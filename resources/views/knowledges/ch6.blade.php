@@ -1,3 +1,6 @@
+
+
+
 <!DOCTYPE html>
 <html lang="my">
 
@@ -97,53 +100,49 @@
         @include('layouts.welcome_nav')
     </nav>
 
-    <div class="my-5"></div>
-        <div class="row g-2 align-items-center mx-4">
-            <div class="col-lg-7">
-                <div class="card shadow-sm">
-                    <div class="card-body p-0">
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d24040.513728609832!2d95.45759833220212!3d17.64428124279388!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30c0c1a21c04cbe7%3A0x4a362b7290626ea3!2sHinthada%20General%20Hospital!5e1!3m2!1sen!2smm!4v1754187952930!5m2!1sen!2smm" width="100%" height="350" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-5">
-                <div class="card shadow-sm h-100">
-                    <div class="card-body">
-                        <h5 class="card-title mb-3">ဆက်သွယ်ရန်အချက်အလက်</h5>
-                        <ul class="list-unstyled mb-3">
-                            <li class="mb-2">
-                                <i class="bx bx-map"></i>
-                                <strong>လိပ်စာ:</strong> မြိုနယ်ပြည်သူကျန်းမာရေး ဉီစီးဌာန, ဟင်္သာတမြို့
-                            </li>
-                            <li class="mb-2">
-                                <i class="bx bx-phone"></i>
-                                <strong>ဖုန်း:</strong> 09-123456789, 042-12345
-                            </li>
-                            <li class="mb-2">
-                                <i class="bx bx-envelope"></i>
-                                <strong>အီးမေးလ်:</strong> info@hospital.gov.mm
-                            </li>
-                            <li>
-                                <i class="bx bx-time"></i>
-                                <strong>ဆေးခန်းထိုင်ရက် :</strong> အင်္ဂါ၊ ကြာသပတေး (9:00AM - 4:ူ00PM)
-                            </li>
-                        </ul>
-                        <div>
-                            <a href="tel:09123456789" class="btn btn-primary me-2">
-                                <i class="bx bx-phone-call"></i> ဖုန်းခေါ်ရန်
-                            </a>
-                            <a href="mailto:info@hospital.gov.mm" class="btn btn-outline-primary">
-                                <i class="bx bx-envelope"></i> အီးမေးလ်ပို့ရန်
-                            </a>
+    <section class="chapter-list py-4 mx-auto">
+        <h5 class="fw-bold text-primary mb-4 text-center">
+            <i class="bx bx-book-open"></i>
+            အခန်း ၄ - မွေးဖွားရန်ကြိုတင်ပြင်ဆင်ခြင်း
+        </h5>
+
+        <div class="mb-4">
+            <div class="list-group">
+                <div class="list-group-item d-flex align-items-start gap-3 flex-wrap">
+                    <span class="fs-4 text-success"><i class="bx bx-check-circle"></i></span>
+                    <div class="flex-grow-1">
+                        <div class="chapter-desc mb-2">
+                            အောက်ပါလက္ခဏာများသည် မွေးဖွားကာနီး ရှေ့ပြေးလက္ခဏာများ ဖြစ်သဖြင့် ဆေးရုံ/ဆေးခန်း/ကျန်းမာရေးဌာနသို့ သွားပါ။ သွားဖွားဆရာမကိုခေါ်ပါ။
                         </div>
+                        <div class="chapter-desc mb-2">
+                            <small class="text-secondary">
+                                <ul>
+                                    <li>ချွဲဆင်းလျှင် ပန်းရောင်းသွေးစစွန်းသော (သို့) အရောင်ပဲ့သောချွဲဆင်းလျှင်</li>
+                                    <li>မိနှစ်နှစ်ဆယ် သို့မဟုတ် မိနှစ် ၂၀ အောက်တစ်ခါ ဗိုက်နာလျှင်</li>
+                                    <li>ရေမွှာပေါက်လျှင် ရေဆင်းလျှင်</li>
+
+                                </ul>
+                            </small>
+                        </div> 
                     </div>
                 </div>
             </div>
         </div>
-    </div>
+
+        <div class="d-flex justify-content-between align-items-center text-muted small mt-3">
+            <a href="{{ route('knowledges.chapter5') }}" class="btn btn-outline-primary btn-sm">
+                <i class="bx bx-left-arrow-alt"></i> ရှေစာမျက်နှာ
+            </a>
+            <span><i class="bx bx-book"></i> 6 of 12</span>
+            <a href="{{ route('knowledges.chapter7') }}" class="btn btn-outline-primary btn-sm">
+                နောက်စာမျက်နှာ <i class="bx bx-right-arrow-alt"></i>
+            </a>
+        </div>
+    </section>
+
 
     <footer class="text-center py-3 mt-5" style="color:#6c757d;font-size:0.95rem;">
-        &copy; {{ date('Y') }} Maternal Care System. All rights reserved.
-    </footer>
-</body>
+            &copy; {{ date('Y') }} Maternal Care System. All rights reserved.
+        </footer>
+    </body>
 </html>

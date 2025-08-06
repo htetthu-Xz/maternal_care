@@ -97,48 +97,52 @@
         @include('layouts.welcome_nav')
     </nav>
 
-    <div class="my-5"></div>
-        <div class="row g-2 align-items-center mx-4">
-            <div class="col-lg-7">
-                <div class="card shadow-sm">
-                    <div class="card-body p-0">
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d24040.513728609832!2d95.45759833220212!3d17.64428124279388!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30c0c1a21c04cbe7%3A0x4a362b7290626ea3!2sHinthada%20General%20Hospital!5e1!3m2!1sen!2smm!4v1754187952930!5m2!1sen!2smm" width="100%" height="350" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                    </div>
+    <div class="chapter-list">
+        <h3 class="text-center mb-4" style="color:#0d6efd;font-weight:700;">ကိုယ်ဝန်ဆောင်မိခင်များအတွက် ဗဟုသုတများ</h3>
+        <div class="list-group">
+            <a href="{{ route('knowledges.chapter1') }}" class="list-group-item list-group-item-action d-flex align-items-start">
+                <img src="{{ asset('images/title.png') }}" alt="icon" class="me-3 mt-1" width="40">
+                <div>
+                    <div class="chapter-title">အခန်း ၁</div>
+                    <div class="chapter-desc">ကိုယ်ဝန်ဆောင်မိခင်တို့ ဆောင်ရန်အချက်များ</div>
                 </div>
-            </div>
-            <div class="col-lg-5">
-                <div class="card shadow-sm h-100">
-                    <div class="card-body">
-                        <h5 class="card-title mb-3">ဆက်သွယ်ရန်အချက်အလက်</h5>
-                        <ul class="list-unstyled mb-3">
-                            <li class="mb-2">
-                                <i class="bx bx-map"></i>
-                                <strong>လိပ်စာ:</strong> မြိုနယ်ပြည်သူကျန်းမာရေး ဉီစီးဌာန, ဟင်္သာတမြို့
-                            </li>
-                            <li class="mb-2">
-                                <i class="bx bx-phone"></i>
-                                <strong>ဖုန်း:</strong> 09-123456789, 042-12345
-                            </li>
-                            <li class="mb-2">
-                                <i class="bx bx-envelope"></i>
-                                <strong>အီးမေးလ်:</strong> info@hospital.gov.mm
-                            </li>
-                            <li>
-                                <i class="bx bx-time"></i>
-                                <strong>ဆေးခန်းထိုင်ရက် :</strong> အင်္ဂါ၊ ကြာသပတေး (9:00AM - 4:ူ00PM)
-                            </li>
-                        </ul>
-                        <div>
-                            <a href="tel:09123456789" class="btn btn-primary me-2">
-                                <i class="bx bx-phone-call"></i> ဖုန်းခေါ်ရန်
-                            </a>
-                            <a href="mailto:info@hospital.gov.mm" class="btn btn-outline-primary">
-                                <i class="bx bx-envelope"></i> အီးမေးလ်ပို့ရန်
-                            </a>
-                        </div>
-                    </div>
+            </a>
+            <a href="{{ route('knowledges.chapter2') }}" class="list-group-item list-group-item-action d-flex align-items-start">
+                <img src="{{ asset('images/title.png') }}" alt="icon" class="me-3 mt-1" width="40">
+                <div>
+                    <div class="chapter-title">အခန်း ၂</div>
+                    <div class="chapter-desc">ကိုယ်ဝန်ဆောင်မိခင်တို့ ရှောင်ရန်အချက်များ</div>
                 </div>
-            </div>
+            </a>
+            <a href="{{ route('knowledges.chapter3') }}" class="list-group-item list-group-item-action d-flex align-items-start">
+                <img src="{{ asset('images/title.png') }}" alt="icon" class="me-3 mt-1" width="40">
+                <div>
+                    <div class="chapter-title">အခန်း ၃</div>
+                    <div class="chapter-desc">ကိုယ်ဝန်ဆောင်မိခင်များအတွက် အန္တရာယ်လက္ခဏာများ</div>
+                </div>
+            </a>
+            <a href="{{ route('knowledges.chapter4') }}" class="list-group-item list-group-item-action d-flex align-items-start">
+                <img src="{{ asset('images/title.png') }}" alt="icon" class="me-3 mt-1" width="40">
+                <div>
+                    <div class="chapter-title">အခန်း ၄</div>
+                    <div class="chapter-desc">မွေးဖွားရန်ကြိုတင်ပြင်ဆင်ခြင်း</div>
+                </div>
+            </a>
+            <a href="{{ route('knowledges.chapter5') }}" class="list-group-item list-group-item-action d-flex align-items-start">
+                <img src="{{ asset('images/title.png') }}" alt="icon" class="me-3 mt-1" width="40">
+                <div>
+                    <div class="chapter-title">အခန်း ၅</div>
+                    <div class="chapter-desc">ဆေးရုံတွင်သာမွေးသင့်သည့်သူများ</div>
+                </div>
+            </a>
+            <a href="{{ route('knowledges.chapter6') }}" class="list-group-item list-group-item-action d-flex align-items-start">
+                <img src="{{ asset('images/title.png') }}" alt="icon" class="me-3 mt-1" width="40">
+                <div>
+                    <div class="chapter-title">အခန်း ၆</div>
+                    <div class="chapter-desc">မွေးဖွားခါနီးရှေ့ပြေးလက်က္ခဏာများ</div>
+                </div>
+            </a>
+
         </div>
     </div>
 

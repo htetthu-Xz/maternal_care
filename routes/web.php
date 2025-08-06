@@ -25,6 +25,38 @@ Route::get('health-care-knowledge', function () {
     return view('knowledge');
 })->name('knowledge');
 
+Route::get('knowledges', function () {
+    return view('knowledges.knowledge');
+})->name('knowledges.index');
+
+Route::get('knowledges/chapter1', function () {
+    return view('knowledges.ch1');
+})->name('knowledges.chapter1');
+
+Route::get('knowledges/chapter2', function () {
+    return view('knowledges.ch2');
+})->name('knowledges.chapter2');
+
+Route::get('knowledges/chapter3', function () {
+    return view('knowledges.ch3');
+})->name('knowledges.chapter3');
+
+Route::get('knowledges/chapter4', function () {
+    return view('knowledges.ch4');
+})->name('knowledges.chapter4');
+
+Route::get('knowledges/chapter5', function () {
+    return view('knowledges.ch5');
+})->name('knowledges.chapter5');
+
+Route::get('knowledges/chapter6', function () {
+    return view('knowledges.ch6');
+})->name('knowledges.chapter6');
+
+Route::get('knowledges/chapter7', function () {
+    return view('knowledges.ch7');
+})->name('knowledges.chapter7');
+
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
