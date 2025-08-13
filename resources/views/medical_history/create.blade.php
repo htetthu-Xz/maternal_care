@@ -164,14 +164,14 @@
 
                 <div class="row g-3 mb-4">
                     <div class="col-md-6">
-                        <label class="form-label">TT Vaccine #1 Date</label>
+                        <label class="form-label">Td Vaccine #1 Date</label>
                         <input type="date" name="tt_vaccine_1_date" class="form-control" value="{{ old('tt_vaccine_1_date') }}">
                     </div>
                     @error('tt_vaccine_1_date')
                         <div class="text-danger">{{ $message }}</div>
                     @enderror
                     <div class="col-md-6">
-                        <label class="form-label">TT Vaccine #2 Date</label>
+                        <label class="form-label">Td Vaccine #2 Date</label>
                         <input type="date" name="tt_vaccine_2_date" class="form-control" value="{{ old('tt_vaccine_2_date') }}">
                     </div>
                     @error('tt_vaccine_2_date')
