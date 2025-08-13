@@ -101,7 +101,7 @@
         <img src="{{ asset('images/logo1.png') }}" alt="Logo" class="logo mb-3 border border-light rounded-pill" width="70" height="70">
         <div class="mx-4">
             <h4 class="mb-3">ကျန်းမာရေးဝန်ကြီးဌာန</h4>
-            <h5 class="mb-2">မြိုနယ်ပြည်သူကျန်းမာရေး ဦးစီးဌာန (ဟင်္သာတ)</h5>
+            <h5 class="mb-2">မြို့နယ်ပြည်သူ့ကျန်းမာရေး ဦးစီးဌာန (ဟင်္သာတ)</h5>
 
         </div>
     </div>
@@ -136,8 +136,7 @@
 <section class="py-5" style="background-color: #f8fafc;">
     <div class="container-fluid px-4 py-4">
         <div class="text-center mb-5">
-            <h2 class="mb-3" style="color: #1e293b; font-weight: 700;">ကျန်းမာရေးဝန်ကြီးဌာနလက်အောက်ရှိ ဦးစီးဌာနများ</h2>
-            <p class="lead text-muted">Directorates under Ministry of Health and Sports</p>
+            <h2 class="mb-3" style="color: #1e293b; font-weight: 700;"><i class='bx bx-home-circle fs-1 mx-1'></i>ကျန်းမာရေးဝန်ကြီးဌာနလက်အောက်ရှိ ဦးစီးဌာနများ</h2>
         </div>
         
         <div class="row g-4">

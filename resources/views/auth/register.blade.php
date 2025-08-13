@@ -53,15 +53,15 @@
   <body>
     <!-- Content -->
 
-    <div class="container-xxl">
+    <div class="container-xxl" style="background-color: rgb(105, 162, 253);">
       <div class="authentication-wrapper authentication-basic container-p-y">
         <div class="authentication-inner">
           <!-- Register Card -->
           <div class="card">
               <div class="card-header">
                 <div class="app-brand flex-column justify-content-center mb-0">
-                  <img src="{{ asset('images/logo.svg') }}" alt="Logo" class="logo mb-3" width="50" height="50">
-                  <span class="app-brand-text text-body fw-bolder mb-1 text-center">ကိုယ်ဝန်ဆောင်မိခင်နှင့်ကလေးစောင့်ရှောက်မှု <br> စနစ် မှကြိုဆိုပါသည်။</span>
+                  <img src="{{ asset('images/logo1.png') }}" alt="Logo" class="logo mb-3" width="50" height="50">
+                  <span class="app-brand-text text-body fw-bolder mb-1 text-center">မှက်ပုံတင်ရန်</span>
                 </div>
               </div>
             <div class="card-body">

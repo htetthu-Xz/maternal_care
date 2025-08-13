@@ -53,7 +53,7 @@
   <body>
     <!-- Content -->
 
-    <div class="container-xxl">
+    <div class="container-xxl" style="background-color: rgb(105, 162, 253);">
       <div class="authentication-wrapper authentication-basic container-p-y">
         <div class="authentication-inner">
           <!-- Register -->
@@ -61,7 +61,7 @@
             <div class="card-header">
               <div class="app-brand flex-column justify-content-center mb-0">
                 <img src="{{ asset('images/logo1.png') }}" alt="Logo" class="logo mb-3" width="50" height="50">
-                <span class="app-brand-text text-body fw-bolder mb-1 text-center">ကိုယ်ဝန်ဆောင်မိခင်နှင့်ကလေးစောင့်ရှောက်မှု <br> စနစ် မှကြိုဆိုပါသည်။</span>
+                <span class="app-brand-text text-body fw-bolder mb-1 text-center">လော့ခ်အင် ဝင်ရန်</span>
               </div>
             </div>
             <div class="card-body">
@@ -107,12 +107,6 @@
                         </div>
                     @endif
                     <span class="input-group-text cursor-pointer"><i class="bx bx-hide"></i></span>
-                  </div>
-                </div>
-                <div class="mb-3">
-                  <div class="form-check">
-                    <input class="form-check-input" type="checkbox" id="remember-me" />
-                    <label class="form-check-label" for="remember-me"> Remember Me </label>
                   </div>
                 </div>
                 <div class="mb-3">

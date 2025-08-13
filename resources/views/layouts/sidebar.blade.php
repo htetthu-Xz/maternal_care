@@ -64,7 +64,7 @@
                   <li class="menu-item {{ request()->routeIs('patient.my-care-history') ? 'active' : '' }}">
                     <a href="{{ route('patient.my-care-history') }}" class="menu-link">
                       <i class="menu-icon tf-icons bx bx-plus-medical"></i>
-                      <div data-i18n="Analytics">Care History
+                      <div data-i18n="Analytics">စောင့်ရှောက်မှု မှက်တမ်း
                       </div>
                     </a>
                   </li>
@@ -83,7 +83,7 @@
                         @csrf
                       </form>
                       <i class="bx bx-power-off me-2"></i>
-                      <span class="align-middle">Log Out</span>
+                      <span class="align-middle">လော့ခ်အောက်ထွက်ရန်</span>
                   </a>
                 </li>
                   {{-- @endcan --}}
