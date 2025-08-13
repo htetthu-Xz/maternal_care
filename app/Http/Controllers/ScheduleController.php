@@ -41,7 +41,6 @@ class ScheduleController extends Controller
             $validated['urine_test'] = $validated['urine_test'] === 'yes' ? true : false;
             $validated['is_transfer'] = $validated['is_transfer'] === 'yes' ? true : false;
             $validated['urine_sugar'] = $validated['urine_sugar'] === 'yes' ? true : false;
-            $validated['hemoglobin'] = $validated['hemoglobin'] === 'yes' ? true : false;
             $validated['sifalip'] = $validated['sifalip'] === 'yes' ? true : false;
             $validated['iron_folate_tablets'] = $validated['iron_folate_tablets'] === 'yes' ? true : false;
 

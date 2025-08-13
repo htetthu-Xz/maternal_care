@@ -32,7 +32,13 @@ class RegisteredUserController extends Controller
         $request->validate([
             'patient_name' => ['required', 'string', 'max:255'],
             'email' => ['required', 'string', 'lowercase', 'email', 'max:255', 'unique:' . User::class],
-            'password' => ['required', Rules\Password::defaults()],
+            'password' => [
+                'required',
+                'string',
+                'min:8',
+                // At least one uppercase, one lowercase, one digit, one special character
+                'regex:/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%^&*(),.?":{}|<>]).+$/',
+            ],
             'age' => ['required', 'integer', 'min:0'],
             'blood_group' => ['required', 'string', 'max:3'],
             'address' => ['required', 'string', 'max:255'],
@@ -52,8 +58,6 @@ class RegisteredUserController extends Controller
 
         event(new Registered($user));
 
-        Auth::login($user);
-
-        return redirect(route('patient.dashboard', absolute: false));
+        return redirect(route('welcome', absolute: false));
     }
 }

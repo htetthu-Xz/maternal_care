@@ -30,7 +30,7 @@ class TransferController extends Controller
 
         Transfer::create($validated);
 
-        return redirect()->route('admin.dashboard')->with('success', 'Patient transfer recorded successfully.');
+        return redirect()->route('admin.dashboard.today')->with('success', 'Patient transfer recorded successfully.');
     }
 
     public function show(Transfer $transfer)

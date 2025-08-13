@@ -6,7 +6,11 @@ use Carbon\Carbon;
 use App\Models\Patient;
 use App\Models\Schedule;
 use Illuminate\Http\Request;
+use App\Exports\AllPatientsExport;
+use App\Exports\TodayPatientsExport;
 use App\Http\Controllers\Controller;
+use Maatwebsite\Excel\Facades\Excel;
+use App\Exports\ReturningPatientsExport;
 
 class DashboardController extends Controller
 {
@@ -55,5 +59,20 @@ class DashboardController extends Controller
         $allPatients = Patient::with(['user', 'schedules'])->get();
 
         return view('admin.patients.all', compact('allPatients'));
+    }
+
+    public function exportToday()
+    {
+        return Excel::download(new TodayPatientsExport, 'today_patients.xlsx');
+    }
+
+    public function exportReturning()
+    {
+        return Excel::download(new ReturningPatientsExport, 'returning_patients.xlsx');
+    }
+
+    public function exportAll()
+    {
+        return Excel::download(new AllPatientsExport, 'all_patients.xlsx');
     }
 }

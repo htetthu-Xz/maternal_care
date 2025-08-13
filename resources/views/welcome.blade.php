@@ -96,12 +96,12 @@
 </head>
 
 <body>
-  <section class="text-center bg-primary text-white py-4">
+  <section class="text-center bg-primary text-white py-1">
     <div class="d-flex flex-column justify-content-center align-items-center p-2">
-        <img src="{{ asset('images/logo.svg') }}" alt="Logo" class="logo mb-3" width="100" height="100">
+        <img src="{{ asset('images/logo1.png') }}" alt="Logo" class="logo mb-3 border border-light rounded-pill" width="70" height="70">
         <div class="mx-4">
             <h4 class="mb-3">ကျန်းမာရေးဝန်ကြီးဌာန</h4>
-            <h5 class="mb-2">မြိုနယ်ပြည်သူကျန်းမာရေး ဉီစီးဌာန (ဟင်္သာတ)</h5>
+            <h5 class="mb-2">မြိုနယ်ပြည်သူကျန်းမာရေး ဦးစီးဌာန (ဟင်္သာတ)</h5>
 
         </div>
     </div>
@@ -115,13 +115,13 @@
             @include('layouts.welcome_nav')
         </nav>
         <div class="carousel-item active">
-            <img src="{{ asset('images/hero1.jpg') }}" class="d-block w-100 carousel-img" alt="Mother 1">
+            <img src="{{ asset('images/1hero.jpg') }}" class="d-block w-100 carousel-img" alt="Mother 1">
         </div>
         <div class="carousel-item">
-            <img src="{{ asset('images/hero2.JPG') }}" class="d-block w-100 carousel-img" alt="Mother 2">
+            <img src="{{ asset('images/2hero.jpg') }}" class="d-block w-100 carousel-img" alt="Mother 2">
         </div>
         <div class="carousel-item">
-            <img src="{{ asset('images/hero3.jpg') }}" class="d-block w-100 carousel-img" alt="Hospital">
+            <img src="{{ asset('images/3hero.jpg') }}" class="d-block w-100 carousel-img" alt="Hospital">
         </div>
     </div>
     <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
@@ -136,7 +136,7 @@
 <section class="py-5" style="background-color: #f8fafc;">
     <div class="container-fluid px-4 py-4">
         <div class="text-center mb-5">
-            <h2 class="mb-3" style="color: #1e293b; font-weight: 700;">ကျန်းမာရေးဝန်ကြီးဌာနလက်အောက်ရှိ ဉီးစီးဌာနများ</h2>
+            <h2 class="mb-3" style="color: #1e293b; font-weight: 700;">ကျန်းမာရေးဝန်ကြီးဌာနလက်အောက်ရှိ ဦးစီးဌာနများ</h2>
             <p class="lead text-muted">Directorates under Ministry of Health and Sports</p>
         </div>
         
@@ -145,7 +145,7 @@
                 <a href="#" class="department-btn w-100 dept-1">
                     <div class="department-text">
                         ပြည်သူကျန်းမာရေး<br>
-                        ဉီးစီးဌာန
+                        ဦးစီးဌာန
                     </div>
                 </a>
             </div>
@@ -154,7 +154,7 @@
                 <a href="#" class="department-btn w-100 dept-2">
                     <div class="department-text">
                         ကုသရေး
-                        ဉီးစီးဌာန
+                        ဦးစီးဌာန
                     </div>
                 </a>
             </div>
@@ -163,7 +163,7 @@
                 <a href="#" class="department-btn w-100 dept-3">
                     <div class="department-text">
                         ဆေးသုတေသန<br>
-                        ဉီးစီးဌာန
+                        ဦးစီးဌာန
                     </div>
                 </a>
             </div>
@@ -172,7 +172,7 @@
                 <a href="#" class="department-btn w-100 dept-4">
                     <div class="department-text">
                         တိုင်းရင်းဆေးပညာ<br>
-                        ဉီးစီးဌာန
+                        ဦးစီးဌာန
                     </div>
                 </a>
             </div>
@@ -181,7 +181,7 @@
                 <a href="#" class="department-btn w-100 dept-5">
                     <div class="department-text">
                         ကျန်းမာရေးလူစွမ်းအား<br>
-                        အရင်းမြစ်ဉီးစီးဌာန
+                        အရင်းမြစ်ဦးစီးဌာန
                     </div>
                 </a>
             </div>
@@ -190,7 +190,7 @@
                 <a href="#" class="department-btn w-100 dept-6">
                     <div class="department-text">
                         အစားအသောက်နှင့်ဆေးဝါး<br>
-                        ကွပ်ကဲရေးဉီးစီးဌာန
+                        ကွပ်ကဲရေးဦးစီးဌာန
                     </div>
                 </a>
             </div>

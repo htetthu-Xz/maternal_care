@@ -33,7 +33,7 @@
                     <input type="date" name="date" class="form-control" value="{{ \Carbon\Carbon::today()->format('Y-m-d') }}" readonly required>
                 </div>
                 <div class="col-md-4 mb-3">
-                    <label>Weight (ကိုယ်အလေးချိန်)</label>
+                    <label>Weight (kg)(ကိုယ်အလေးချိန်) </label>
                     <input type="number" step="0.1" name="weight" class="form-control" required>
                 </div>
                 <div class="col-md-4 mb-3">
@@ -84,15 +84,11 @@
 
                 <div class="col-md-4 mb-3">
                     <label for="">Hemoglobin (ဟေမိုဂလိုဘင်)</label>
-                    <select name="hemoglobin" class="form-control">
-                        <option value="">Select</option>
-                        <option value="yes">Yes</option>
-                        <option value="no">No</option>
-                    </select>
+                    <input type="text" name="hemoglobin" id="" class="form-control">
                 </div>
 
                 <div class="col-md-4 mb-3">
-                    <label for="">Sifalip (ဆစ်ဖလစ်ရောဂါပိုး ရှိ/မရှိ)</label>
+                    <label for="">Syphilis/HIV (ဆစ်ဖလစ်ရောဂါပိုး/အိပ်စ်အိုင်ဗွီ ရှိ/မရှိ)</label>
                     <select name="sifalip" class="form-control">
                         <option value="">Select</option>
                         <option value="yes">Yes</option>
@@ -111,7 +107,7 @@
 
                 <div class="col-md-12 mb-3">
                     <label>Symptoms / Treatment (လက္ခဏာများ / ကုသမှု)</label>
-                    <textarea name="symptoms" class="form-control"></textarea>
+                    <textarea name="symptoms_and_treatment" class="form-control"></textarea>
                 </div>
 
                 <div class="col-md-4 mb-3">
@@ -198,7 +194,7 @@
                 </div>
                 <div class="col-md-12 mb-3">
                     <label>Symptoms / Treatment (လက္ခဏာများ / ကုသမှု)</label>
-                    <textarea name="symptoms" class="form-control"></textarea>
+                    <textarea name="symptoms_and_treatment" class="form-control"></textarea>
                 </div>
 
                 <div class="col-md-4 mb-3">

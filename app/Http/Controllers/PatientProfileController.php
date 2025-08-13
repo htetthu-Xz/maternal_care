@@ -64,7 +64,45 @@ class PatientProfileController extends Controller
         $pn_count = $patient->careSteps()->where('type', 'PNC')->count();
         $AN_Data = $patient->schedules()->where('type', 'ANC')->take($an_count)->get();
         $PN_Data = $patient->schedules()->where('type', 'PNC')->take($pn_count)->get();
-        return view('patient.show', compact('patient', 'AN_Data', 'PN_Data'));
+        $weeksAxis = range(0, 40);
+        $lower = [];
+        $upper = [];
+        for ($w = 0; $w <= 40; $w++) {
+            $lower[] = round(40 + (($w - 5) * (18 / 36)), 1); // 42 → 60
+            $upper[] = round(54 + (($w - 5) * (15 / 36)), 1); // 48 → 63
+        }
+
+        $anc = $patient->schedules()
+            ->where('type', 'ANC')
+            ->whereNotNull('weight')
+            ->get(['number', 'pregnancy_week', 'weight'])
+            ->map(function ($s) {
+                $map = [1 => 4, 2 => 8, 3 => 12, 4 => 16, 5 => 20, 6 => 24, 7 => 28, 8 => 32];
+                $week = ($map[$s->number] ?? null);
+                return $week ? ['x' => (int)$week, 'y' => (float)$s->weight] : null;
+            })
+            ->filter()
+            ->sortBy('x')
+            ->values();
+        // dd($anc);
+
+        if ($anc->isNotEmpty()) {
+            $firstWeight = $anc->first()['y'];
+            $anc->prepend(['x' => 4, 'y' => $firstWeight]);
+        }
+
+
+
+
+        return view('patient.show', [
+            'patient' => $patient,
+            'AN_Data' => $AN_Data,
+            'PN_Data' => $PN_Data,
+            'weeksAxis' => $weeksAxis,
+            'lower' => $lower,
+            'upper' => $upper,
+            'points' => $anc
+        ]);
     }
 
     public function showAnPn()

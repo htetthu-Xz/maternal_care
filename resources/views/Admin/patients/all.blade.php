@@ -10,7 +10,11 @@
     {{-- All Patients --}}
     <div class="card">
         <div class="card-header d-flex justify-content-between align-items-center bg-secondary text-white">
-            <h5 class="mb-0">⚪ All Patients ({{ $allPatients->count() }})</h5>
+            <h5 class="mb-0 text-white">⚪ All Patients ({{ $allPatients->count() }})</h5>
+            <a href="{{ route('patients.export.all') }}" class="btn btn-sm btn-success d-flex align-items-center gap-1 shadow">
+                <i class="bx bx-download"></i>
+                <span>Export</span>
+            </a>
         </div>
         <div class="table-responsive text-nowrap">
             <table class="table table-striped">

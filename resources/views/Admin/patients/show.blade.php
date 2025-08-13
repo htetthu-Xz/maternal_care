@@ -1,12 +1,12 @@
 @extends('layouts.master')
 
 @section('title', 'Today Patient Detail')
-@section('pages', 'Today Patients')
-@section('page', 'Patient Detail')
+@section('pages', 'လူနာများ')
+@section('page', 'လူနာအချက်အလက်များ')
 
 @section('content')
 <div class="card p-4">
-    <h4 class="mb-3">👩‍⚕️ Mother Profile</h4>
+    <h4 class="mb-3">👩‍⚕️ မိခင်များအတွက် မွေးဖွားမှုပြင်ဆင်ခြင်း</h4>
     <div class="row mb-3">
         @php
             $fields = [

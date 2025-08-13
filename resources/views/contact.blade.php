@@ -102,7 +102,7 @@
             <div class="col-lg-7">
                 <div class="card shadow-sm">
                     <div class="card-body p-0">
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d24040.513728609832!2d95.45759833220212!3d17.64428124279388!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30c0c1a21c04cbe7%3A0x4a362b7290626ea3!2sHinthada%20General%20Hospital!5e1!3m2!1sen!2smm!4v1754187952930!5m2!1sen!2smm" width="100%" height="350" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d631.7293252302326!2d95.46123171578725!3d17.646472384782413!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30c0c1dfe1630d8b%3A0x1090bf9de1ba4bab!2z4YCV4YC84YCK4YC64YCe4YCw4YC34YCA4YC74YCU4YC64YC44YCZ4YCs4oCL4YCb4YCx4YC44YCM4YCs4YCU!5e1!3m2!1sen!2smm!4v1755007190237!5m2!1sen!2smm" width="100%" height="350" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                     </div>
                 </div>
             </div>
@@ -113,7 +113,7 @@
                         <ul class="list-unstyled mb-3">
                             <li class="mb-2">
                                 <i class="bx bx-map"></i>
-                                <strong>လိပ်စာ:</strong> မြိုနယ်ပြည်သူကျန်းမာရေး ဉီစီးဌာန, ဟင်္သာတမြို့
+                                <strong>လိပ်စာ:</strong> ဘုရားလမ်း၊ ဥယျာဥ်မြောက်ရပ်ကွက်၊ ဟင်္သာတမြို့
                             </li>
                             <li class="mb-2">
                                 <i class="bx bx-phone"></i>

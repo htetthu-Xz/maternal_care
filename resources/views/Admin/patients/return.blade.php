@@ -9,7 +9,11 @@
 
     <div class="card mb-4">
         <div class="card-header d-flex justify-content-between align-items-center bg-warning">
-            <h5 class="mb-0">🟡 Returning Patients Today ({{ $returningPatients->count() }})</h5>
+            <h5 class="mb-0 text-white">🟡 Returning Patients Today ({{ $returningPatients->count() }})</h5>
+            <a href="{{ route('patients.export.returning') }}" class="btn btn-sm btn-success d-flex align-items-center gap-1 shadow">
+                <i class="bx bx-download"></i>
+                <span>Export</span>
+            </a>
         </div>
         <div class="table-responsive text-nowrap">
             <table class="table table-bordered table-hover">

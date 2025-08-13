@@ -1,8 +1,8 @@
 @extends('layouts.master')
 
 @section('title', 'Medical History')
-@section('pages', 'Medical Histories')
-@section('page', 'Create Medical History')
+@section('pages', 'လူနာ မှက်တမ်းများ')
+@section('page', 'ကိုယ်ဝင်ဆောင်မိခင်ကိုယ်ရေးရာဇဝင် ထည့်သွင်းခြင်း')
     
 
 @section('content')
@@ -11,7 +11,6 @@
         <div class="card shadow-sm p-3">
             <h2 class="text-center fw-bold mb-3 p-2">
                 ကိုယ်ဝင်ဆောင်မိခင်ကိုယ်ရေးရာဇဝင်<br>
-                <small class="text-muted">Mother's Medical History</small>
             </h2>
             @if($errors->any())
                 <div class="alert alert-danger">
@@ -36,14 +35,14 @@
                     @enderror
                     <div class="col-md-6">
                         <label class="form-label">နောက်ဆုံးရာသီလာသောရက် <span class="text-muted">(Last Menstruation Date)</span></label>
-                        <input type="date" name="last_menstruation_date" class="form-control" value="{{ old('last_menstruation_date') }}" required>
+                        <input type="date" name="last_menstruation_date" id="last_menstruation" class="form-control" value="{{ old('last_menstruation_date') }}" required>
                     </div>
                     @error('last_menstruation_date')
                         <div class="text-danger">{{ $message }}</div>
                     @enderror
                     <div class="col-md-6">
                         <label class="form-label">ခန့်မှန်းမွေးဖွားရက် <span class="text-muted">(Estimated Delivery Date)</span></label>
-                        <input type="date" name="estimated_delivery_date" class="form-control" value="{{ old('estimated_delivery_date') }}">
+                        <input type="date" name="estimated_delivery_date" class="form-control" id="estimated_delivery" value="{{ old('estimated_delivery_date') }}" readonly>
                     </div>
                     @error('estimated_delivery_date')
                         <div class="text-danger">{{ $message }}</div>
@@ -204,4 +203,24 @@
             });
         </script>
     @endif
+    <script>
+        $(document).ready(function() {
+            $('#last_menstruation').on('change', function() {
+                let last_m_date = $(this).val();
+                if (last_m_date) {
+
+                    let estimatedDate = new Date(last_m_date);
+                    estimatedDate.setDate(estimatedDate.getDate() + 280);
+
+                    let yyyy = estimatedDate.getFullYear();
+                    let mm = String(estimatedDate.getMonth() + 1).padStart(2, '0');
+                    let dd = String(estimatedDate.getDate()).padStart(2, '0');
+                    let formatted = `${yyyy}-${mm}-${dd}`;
+                    $('#estimated_delivery').val(formatted);
+                } else {
+                    $('#estimated_delivery').val('');
+                }
+            });
+        });
+    </script>
 @endpush

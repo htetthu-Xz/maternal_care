@@ -60,7 +60,7 @@
           <div class="card">
             <div class="card-header">
               <div class="app-brand flex-column justify-content-center mb-0">
-                <img src="{{ asset('images/logo.svg') }}" alt="Logo" class="logo mb-3" width="50" height="50">
+                <img src="{{ asset('images/logo1.png') }}" alt="Logo" class="logo mb-3" width="50" height="50">
                 <span class="app-brand-text text-body fw-bolder mb-1 text-center">ကိုယ်ဝန်ဆောင်မိခင်နှင့်ကလေးစောင့်ရှောက်မှု <br> စနစ် မှကြိုဆိုပါသည်။</span>
               </div>
             </div>

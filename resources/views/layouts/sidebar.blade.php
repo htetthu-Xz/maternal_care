@@ -2,7 +2,7 @@
     <div class="app-brand demo">
         <a href="{{ auth()->user()->role === 'admin' ? route('admin.dashboard.today') : route('patient.dashboard') }}" class="app-brand-link">
             <span class="app-brand-logo demo">
-              <img src="{{ asset('images/logo.svg') }}" alt="Maternal Care Logo" class="img-fluid" style="width: 40px; height: 40px;">
+              <img src="{{ asset('images/logo1.png') }}" alt="Maternal Care Logo" class="img-fluid" style="width: 40px; height: 40px;">
             </span>
             <span class="app-brand-text demo menu-text fs-3 mx-2 capitalize">Maternal Care</span>
         </a>

@@ -12,6 +12,7 @@ use App\Http\Controllers\PatientProfileController;
 use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\PatientDashboardController;
 use App\Http\Controllers\PatientConversationController;
+use SebastianBergmann\CodeCoverage\Report\Html\Dashboard;
 
 Route::get('/', function () {
     return view('welcome');
@@ -126,6 +127,10 @@ Route::middleware(['auth', 'admin.check'])->group(function () {
     Route::post('/patients/{patient}/remind', [ConversationController::class, 'remindPatient'])->name('patients.remind');
     Route::post('/conversations/{conversation}/skip', [ConversationController::class, 'skipForm'])->name('conversations.skip.form');
     Route::post('/care-step/skip/{patient}', [CareStepController::class, 'skip'])->name('care-step.skip');
+
+    Route::get('/patients/export/today', [DashboardController::class, 'exportToday'])->name('patients.export.today');
+    Route::get('/patients/export/returning', [DashboardController::class, 'exportReturning'])->name('patients.export.returning');
+    Route::get('/patients/export/all', [DashboardController::class, 'exportAll'])->name('patients.export.all');
 });
 
 require __DIR__ . '/auth.php';
