@@ -96,7 +96,7 @@
                         <div class="card-body">
                             @php $transfer = $schedule->patient->transfers->last(); @endphp
                             <ul class="list-group list-group-flush">
-                                <li class="list-group-item"><strong>Date:</strong> {{ $transfer->transfer_date->format('d M Y') }}</li>
+                                <li class="list-group-item"><strong>Date:</strong> {{ $transfer->transfer_date ? Carbon\Carbon::parse($transfer->transfer_date)->format('d M Y') : '-' }}</li>
                                 <li class="list-group-item"><strong>Reason:</strong> {{ $transfer->reason }}</li>
                                 <li class="list-group-item"><strong>To:</strong> {{ $transfer->to }}</li>
                                 <li class="list-group-item"><strong>Condition:</strong> {{ $transfer->condition }}</li>
