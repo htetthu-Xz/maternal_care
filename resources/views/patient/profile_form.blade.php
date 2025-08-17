@@ -71,7 +71,7 @@
                 </div>
 
                 <div class="col-md-6">
-                <label class="form-label">ကလေးမွေးဖွားရန်သာဖွားကျွမ်းကျင်သူတစ်ဉီး ဉီးကိုရွေးချယ်ထားပါသလား</label>
+                <label class="form-label">ကလေးမွေးဖွားရန်သာဖွားကျွမ်းကျင်သူတစ်ဦးဦးကိုရွေးချယ်ထားပါသလား</label>
                 <select class="form-select" name="is_expect_selected_for_birth">
                     <option value="">ရွေးချယ်ပါ / Choose</option>
                     <option value="1">ရှိ</option>
@@ -95,7 +95,7 @@
                 </div>
 
                 <div class="col-md-6">
-                <label class="form-label">အရေးပေါ်ဖြစ်ပါက ဆုံးဖြတ်ပေးနိုင်မည့်သူတစ်ဦးဦီးသူမတွင်ရှိပါသလား</label>
+                <label class="form-label">အရေးပေါ်ဖြစ်ပါက ဆုံးဖြတ်ပေးနိုင်မည့်သူတစ်ဦးဦီသူမတွင်ရှိပါသလား</label>
                 <select class="form-select" name="has_decision_maker_in_emergency">
                     <option value="">ရွေးချယ်ပါ / Choose</option>
                     <option value="1">ရှိ</option>
