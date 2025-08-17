@@ -88,7 +88,7 @@
             <img src="{{ asset('images/logo.svg') }}" alt="Logo" class="logo mb-3" width="100" height="100">
             <div class="mx-4">
                 <h4 class="mb-3">ကျန်းမာရေးဝန်ကြီးဌာန</h4>
-                <h5 class="mb-2">မြိုနယ်ပြည်သူကျန်းမာရေး ဦးစီးဌာန (ဟင်္သာတ)</h5>
+                <h5 class="mb-2">မြိုနယ်ပြည်သူ့ကျန်းမာရေး ဦးစီးဌာန (ဟင်္သာတ)</h5>
             </div>
         </div>
     </section>
