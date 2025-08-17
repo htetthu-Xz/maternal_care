@@ -61,7 +61,7 @@
               <div class="card-header">
                 <div class="app-brand flex-column justify-content-center mb-0">
                   <img src="{{ asset('images/logo1.png') }}" alt="Logo" class="logo mb-3" width="50" height="50">
-                  <span class="app-brand-text text-body fw-bolder mb-1 text-center">မှက်ပုံတင်ရန်</span>
+                  <span class="app-brand-text text-body fw-bolder mb-1 text-center">မှတ်ပုံတင်ရန်</span>
                 </div>
               </div>
             <div class="card-body">
@@ -141,6 +141,8 @@
                       aria-describedby="password"
                     />
                     <span class="input-group-text cursor-pointer"><i class="bx bx-hide"></i></span>
+
+                    <span class="text-secondary mt-1" style="font-size: 11px">Hint : One special character, one number, and at least 8 characters</span>
 
                     @error('password')
                         <div class="alert alert-danger">{{ $message }}</div>

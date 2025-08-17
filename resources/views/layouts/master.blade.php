@@ -81,6 +81,11 @@
         font-weight: bold;
         font-size: 1.2rem !important;
       }
+
+      .bg-menu-theme .menu-inner > .menu-item.active > .menu-link {
+        background-color: #007bff !important;
+        color: #fff !important;
+      }
     </style>
 
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>

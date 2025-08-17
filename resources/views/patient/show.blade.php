@@ -10,60 +10,60 @@
 @section('content')
 
 
-<div class="container py-4">
-    <div class="card shadow-sm p-4">
+<div class="container py-4 force-color" style="color: black;">
+    <div class="card shadow-sm p-4" style="color: black;">
         <h2 class="text-center fw-bold mb-3">
             ကိုယ်ဝန်စောင့်ရှောက်မှု မှက်တမ်း<br>
         </h2>
-        <div class="row w-auto">
-            <div class="table-responsive">
-                <h4>ANC Data</h4>
-                <table class="table table-bordered mt-4">
-                    <thead>
-                        <tr>
-                            <th>#</th>
-                            <th>Visit Date</th>
-                            <th>ကိုယ်အလေးချိန်</th>
-                            <th>သွေးအားနည်းခြင်း</th>
-                            <th>သွေးပေါင်ချိန်</th>
-                            <th>ကိုယ်ဝန်အပတ်</th>
-                            <th>သားအိမ်အမြင့်</th>
-                            <th>အမြွာသံသယ</th>
-                            <th>သနွေသား နှလုံးခုန်သံ</th>
-                            <th>ဆီးစစ်ဆေးခြင်းရှိမရှိ</th>
-                            <th>ဆီးသကြားရှိမရှိ</th>
-                            <th>ဟေမိုဂလိုဘင်</th>
-                            <th>Syphilis/HIV (ဆစ်ဖလစ်ရောဂါပိုး/အိပ်စ်အိုင်ဗွီ ရှိ/မရှိ)</th>
-                            <th>သံဓါက်ဖောလိတ်ဆေးပြားပေးခြင်းရှိမရှိ</th>
-                            <th>မေးခိုင်ဆုံဆို့နာ ကာကွယ်ဆေးထိုးခြင်း</th>
-                            <th>ရောဂါလက္ခဏာနဲ့ ကုသမှု</th>
-                            <th>ညွန်ပို့ခြင်းရှိမရှိ</th>
-                            <th>Transfer Data</th>
+        <div class="row w-auto" style="color: black;">
+            <div class="table-responsive" style="color: black;">
+                <h4 style="color: black;">ANC Data</h4>
+                <table class="table table-bordered mt-4" style="color: black;">
+                    <thead style="color: black;">
+                        <tr style="color: black;">
+                            <th style="color: black;">#</th>
+                            <th style="color: black;">Visit Date</th>
+                            <th style="color: black;">ကိုယ်အလေးချိန်</th>
+                            <th style="color: black;">သွေးအားနည်းခြင်း</th>
+                            <th style="color: black;">သွေးပေါင်ချိန်</th>
+                            <th style="color: black;">ကိုယ်ဝန်အပတ်</th>
+                            <th style="color: black;">သားအိမ်အမြင့်</th>
+                            <th style="color: black;">အမြွာသံသယ</th>
+                            <th style="color: black;">သနွေသား နှလုံးခုန်သံ</th>
+                            <th style="color: black;">ဆီးစစ်ဆေးခြင်းရှိမရှိ</th>
+                            <th style="color: black;">ဆီးသကြားရှိမရှိ</th>
+                            <th style="color: black;">ဟေမိုဂလိုဘင်</th>
+                            <th style="color: black;">Syphilis/HIV (ဆစ်ဖလစ်ရောဂါပိုး/အိပ်စ်အိုင်ဗွီ ရှိ/မရှိ)</th>
+                            <th style="color: black;">သံဓါက်ဖောလိတ်ဆေးပြားပေးခြင်းရှိမရှိ</th>
+                            <th style="color: black;">မေးခိုင်ဆုံဆို့နာ ကာကွယ်ဆေးထိုးခြင်း</th>
+                            <th style="color: black;">ရောဂါလက္ခဏာနဲ့ ကုသမှု</th>
+                            <th style="color: black;">ညွန်ပို့ခြင်းရှိမရှိ</th>
+                            <th style="color: black;">Transfer Data</th>
                         </tr>
                     </thead>
-                    <tbody>
+                    <tbody style="color: black;">
                         @foreach($AN_Data as $an)
-                            <tr>
-                                <td>{{ $loop->index + 1 }}</td>
-                                <td>{{ Carbon\Carbon::parse($an->visit_date)->format('d/m/Y') }}</td>
-                                <td>{{ $an->weight }}</td>
-                                <td>{{ $an->anemia }}</td>
-                                <td>{{ $an->blood_pressure }}</td>
-                                <td>{{ $an->pregnancy_week }}</td>
-                                <td>{{ $an->uterus_height }}</td>
-                                <td>{{ $an->suspicion == 1 ? 'Yes' : 'No' }}</td>
-                                <td>{{ $an->fetal_heartbeat }}</td>
-                                <td>{{ $an->urine_test == 1 ? 'Yes' : 'No' }}</td>
-                                <td>{{ $an->urine_sugar == 1 ? 'Yes' : 'No' }}</td>
-                                <td>{{ $an->hemoglobin }}</td>
-                                <td>{{ $an->sifalip == 1 ? 'Yes' : 'No' }}</td>
-                                <td>{{ $an->iron_folate_tablets == 1 ? 'Yes' : 'No' }}</td>
-                                <td>{{ ($an->MedicalHistory && $an->MedicalHistory->tt_vaccine_2_date) ? 'Yes' : 'No' }}</td>
-                                <td>{{ $an->symptoms_and_treatment }}</td>
-                                <td>{{ $an->is_transfer == 1 ? 'Yes' : 'No' }}</td>
-                                <td>
+                            <tr style="color: black;">
+                                <td style="color: black;">{{ $loop->index + 1 }}</td>
+                                <td style="color: black;">{{ Carbon\Carbon::parse($an->visit_date)->format('d/m/Y') }}</td>
+                                <td style="color: black;">{{ $an->weight }}</td>
+                                <td style="color: black;">{{ $an->anemia }}</td>
+                                <td style="color: black;">{{ $an->blood_pressure }}</td>
+                                <td style="color: black;">{{ $an->pregnancy_week }}</td>
+                                <td style="color: black;">{{ $an->uterus_height }}</td>
+                                <td style="color: black;">{{ $an->suspicion == 1 ? 'Yes' : 'No' }}</td>
+                                <td style="color: black;">{{ $an->fetal_heartbeat }}</td>
+                                <td style="color: black;">{{ $an->urine_test == 1 ? 'Yes' : 'No' }}</td>
+                                <td style="color: black;">{{ $an->urine_sugar == 1 ? 'Yes' : 'No' }}</td>
+                                <td style="color: black;">{{ $an->hemoglobin }}</td>
+                                <td style="color: black;">{{ $an->sifalip == 1 ? 'Yes' : 'No' }}</td>
+                                <td style="color: black;">{{ $an->iron_folate_tablets == 1 ? 'Yes' : 'No' }}</td>
+                                <td style="color: black;">{{ ($an->MedicalHistory && $an->MedicalHistory->tt_vaccine_2_date) ? 'Yes' : 'No' }}</td>
+                                <td style="color: black;">{{ $an->symptoms_and_treatment }}</td>
+                                <td style="color: black;">{{ $an->is_transfer == 1 ? 'Yes' : 'No' }}</td>
+                                <td style="color: black;">
                                     @if($an->is_transfer)
-                                        <a href="{{ route('transfer.show', Transfer::where('patient_id', $patient->id)->whereDate('created_at', $an->created_at)->first()) }}" class="btn btn-sm btn-info">View</a>
+                                        <a href="{{ route('transfer.show', Transfer::where('patient_id', $patient->id)->whereDate('created_at', $an->created_at)->first()) }}" class="btn btn-sm btn-info" style="color: black;">View</a>
                                     @else
                                         -
                                     @endif
@@ -73,49 +73,49 @@
                     </tbody>
                 </table>
 
-                <h4 class="mt-4">PNC Data</h4>
-                <table class="table table-bordered mt-4">
-                    <thead>
-                        <tr>
-                            <th>#</th>
-                            <th>Visit Date</th>
-                            <th>သွေးအားနည်းခြင်း</th>
-                            <th>သွေးပေါင်ချိန်</th>
-                            <th>ကိုယ်အပူချိန်</th>
-                            <th>သားမြတ် နိုးသီးခေါင်း</th>
-                            <th>သားအိမ်လုံးမာခြင်း</th>
-                            <th>မီးနေသွေးပုံမှန်ဆင်းခြင်း</th>
-                            <th>မိန်းမကိုယ်နောက်ပိုင် အနာကျက်ခြင်း</th>
-                            <th>Vitamin A</th>
-                            <th>Vitamin B1</th>
-                            <th>သုံးစွဲသော သားဆက်ခြားနည်း</th>
-                            <th>သံဓါက်ဖောလိတ်ဆေးပြားပေးခြင်းရှိမရှိ</th>
-                            <th>ရောဂါလက္ခဏာနဲ့ ကုသမှု</th>
-                            <th>ညွန်ပို့ခြင်းရှိမရှိ</th>
-                            <th>Transfer Data</th>
+                <h4 class="mt-4" style="color: black;">PNC Data</h4>
+                <table class="table table-bordered mt-4" style="color: black;">
+                    <thead style="color: black;">
+                        <tr style="color: black;">
+                            <th style="color: black;">#</th>
+                            <th style="color: black;">Visit Date</th>
+                            <th style="color: black;">သွေးအားနည်းခြင်း</th>
+                            <th style="color: black;">သွေးပေါင်ချိန်</th>
+                            <th style="color: black;">ကိုယ်အပူချိန်</th>
+                            <th style="color: black;">သားမြတ် နိုးသီးခေါင်း</th>
+                            <th style="color: black;">သားအိမ်လုံးမာခြင်း</th>
+                            <th style="color: black;">မီးနေသွေးပုံမှန်ဆင်းခြင်း</th>
+                            <th style="color: black;">မိန်းမကိုယ်နောက်ပိုင် အနာကျက်ခြင်း</th>
+                            <th style="color: black;">Vitamin A</th>
+                            <th style="color: black;">Vitamin B1</th>
+                            <th style="color: black;">သုံးစွဲသော သားဆက်ခြားနည်း</th>
+                            <th style="color: black;">သံဓါက်ဖောလိတ်ဆေးပြားပေးခြင်းရှိမရှိ</th>
+                            <th style="color: black;">ရောဂါလက္ခဏာနဲ့ ကုသမှု</th>
+                            <th style="color: black;">ညွန်ပို့ခြင်းရှိမရှိ</th>
+                            <th style="color: black;">Transfer Data</th>
                         </tr>
                     </thead>
-                    <tbody>
+                    <tbody style="color: black;">
                         @foreach($PN_Data as $an)
-                            <tr>
-                                <td>{{ $loop->index + 1 }}</td>
-                                <td>{{ Carbon\Carbon::parse($an->visit_date)->format('d/m/Y') }}</td>
-                                <td>{{ $an->anemia }}</td>
-                                <td>{{ $an->blood_pressure }}</td>
-                                <td>{{ $an->fever }}</td>
-                                <td>{{ $an->nipples == 1 ? 'Yes' : 'No' }}</td>
-                                <td>{{ $an->hard_uterus == 1 ? 'Yes' : 'No' }}</td>
-                                <td>{{ $an->is_regular_menstruation == 1 ? 'Yes' : 'No' }}</td>
-                                <td>{{ $an->is_injury_heal == 1 ? 'Yes' : 'No' }}</td>
-                                <td>{{ $an->vitamin_a }}</td>
-                                <td>{{ $an->vitamin_b_one }}</td>
-                                <td>{{ $an->birth_control }}</td>
-                                <td>{{ $an->iron_folate_tablets == 1 ? 'Yes' : 'No' }}</td>
-                                <td>{{ $an->symptoms_and_treatment }}</td>
-                                <td>{{ $an->is_transfer == 1 ? 'Yes' : 'No' }}</td>
-                                <td>
+                            <tr style="color: black;">
+                                <td style="color: black;">{{ $loop->index + 1 }}</td>
+                                <td style="color: black;">{{ Carbon\Carbon::parse($an->visit_date)->format('d/m/Y') }}</td>
+                                <td style="color: black;">{{ $an->anemia }}</td>
+                                <td style="color: black;">{{ $an->blood_pressure }}</td>
+                                <td style="color: black;">{{ $an->fever }}</td>
+                                <td style="color: black;">{{ $an->nipples == 1 ? 'Yes' : 'No' }}</td>
+                                <td style="color: black;">{{ $an->hard_uterus == 1 ? 'Yes' : 'No' }}</td>
+                                <td style="color: black;">{{ $an->is_regular_menstruation == 1 ? 'Yes' : 'No' }}</td>
+                                <td style="color: black;">{{ $an->is_injury_heal == 1 ? 'Yes' : 'No' }}</td>
+                                <td style="color: black;">{{ $an->vitamin_a }}</td>
+                                <td style="color: black;">{{ $an->vitamin_b_one }}</td>
+                                <td style="color: black;">{{ $an->birth_control }}</td>
+                                <td style="color: black;">{{ $an->iron_folate_tablets == 1 ? 'Yes' : 'No' }}</td>
+                                <td style="color: black;">{{ $an->symptoms_and_treatment }}</td>
+                                <td style="color: black;">{{ $an->is_transfer == 1 ? 'Yes' : 'No' }}</td>
+                                <td style="color: black;">
                                     @if($an->is_transfer)
-                                        <a href="{{ route('transfer.show', Transfer::where('patient_id', $patient->id)->whereDate('created_at', $an->created_at)->first()) }}" class="btn btn-sm btn-info">View</a>
+                                        <a href="{{ route('transfer.show', Transfer::where('patient_id', $patient->id)->whereDate('created_at', $an->created_at)->first()) }}" class="btn btn-sm btn-info" style="color: black;">View</a>
                                     @else
                                         -
                                     @endif
@@ -126,7 +126,7 @@
                 </table>
             </div>
 
-                <h4 class="mt-5">{{ $patient->user->name }} — Weight Chart</h4>
+                <h4 class="mt-5" style="color: black;">{{ $patient->user->name }} — Weight Chart</h4>
                 <canvas id="weightChart" height="500px"></canvas>
 
         </div>

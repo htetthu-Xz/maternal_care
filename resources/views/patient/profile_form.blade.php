@@ -95,7 +95,7 @@
                 </div>
 
                 <div class="col-md-6">
-                <label class="form-label">အရေးပေါ်ဖြစ်ပါက ဆုံးဖြတ်ပေးနိုင်မည့်သူတစ်ဉီးဉီးသူမတွင်ရှိပါသလား</label>
+                <label class="form-label">အရေးပေါ်ဖြစ်ပါက ဆုံးဖြတ်ပေးနိုင်မည့်သူတစ်ဦးဦီးသူမတွင်ရှိပါသလား</label>
                 <select class="form-select" name="has_decision_maker_in_emergency">
                     <option value="">ရွေးချယ်ပါ / Choose</option>
                     <option value="1">ရှိ</option>
@@ -155,7 +155,7 @@
                 </div>
 
                 <div class="col-md-6">
-                <label class="form-label">အိမ်မှုကိစ္စနှင့် အခြားကလေးကိစ္စများ ကူညီစောင့်ရှောက်မည့်သူတစ်ဉီးစီစဉ်ထားရှိပါသလား</label>
+                <label class="form-label">အိမ်မှုကိစ္စနှင့် အခြားကလေးကိစ္စများ ကူညီစောင့်ရှောက်မည့်သူတစ်ဦးစီစဉ်ထားရှိပါသလား</label>
                 <select class="form-select" name="has_planned_helper_for_household_and_childcare">
                     <option value="">ရွေးချယ်ပါ / Choose</option>
                     <option value="1">ရှိ</option>

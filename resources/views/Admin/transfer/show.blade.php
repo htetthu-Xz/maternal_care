@@ -6,7 +6,7 @@
 
 @section('content')
 <div class="card p-4">
-    <h4 class="mb-3">Transfer Patient: {{ $patient->user->name }} Details</h4>
+    <h4 class="mb-3">Transfer Patient: {{ $patient->user->name }} </h4>
     <p><strong>Transfer Date:</strong> {{ $transfer->transfer_date }}</p>
     <p><strong>Transfer To:</strong> {{ $transfer->transfer_to }}</p>
     <p><strong>Reason:</strong> {{ $transfer->reason }}</p>

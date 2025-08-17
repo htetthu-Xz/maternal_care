@@ -48,7 +48,7 @@
                         <div class="text-danger">{{ $message }}</div>
                     @enderror
                     <div class="col-md-6">
-                        <label class="form-label">နောက်ဆုံးမွေးဖွား/ကိုယ်ဝန်ဖျက်ရက် <span class="text-muted">(Last Birth or Miscarriage Date)</span></label>
+                        <label class="form-label">နောက်ဆုံးမွေးဖွားရက် <span class="text-muted">(Last Birth or Miscarriage Date)</span></label>
                         <input type="date" name="last_birth_or_miscarriage_date" class="form-control" value="{{ old('last_birth_or_miscarriage_date') }}">
                     </div>
                     @error('last_birth_or_miscarriage_date')

@@ -34,7 +34,7 @@
                 </div>
                 <div class="col-md-4 mb-3">
                     <label>Weight (kg)(ကိုယ်အလေးချိန်) </label>
-                    <input type="number" step="0.1" name="weight" class="form-control" required>
+                    <input type="number" name="weight" class="form-control" required>
                 </div>
                 <div class="col-md-4 mb-3">
                     <label>Anemia (သွေးအားနည်းခြင်း)</label>
@@ -74,7 +74,7 @@
                 </div>
 
                 <div class="col-md-4 mb-3">
-                    <label for="">Urine Sugar (ဆီးသကြားရှိ/မရှိ)</label>
+                    <label for="">Urine Sugar (ဆီးတွင်းသကြားဓါက်ရှိ/မရှိ)</label>
                     <select name="urine_sugar" class="form-control">
                         <option value="">Select</option>
                         <option value="yes">Yes</option>

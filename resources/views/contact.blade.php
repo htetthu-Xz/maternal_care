@@ -88,7 +88,7 @@
             <img src="{{ asset('images/logo.svg') }}" alt="Logo" class="logo mb-3" width="100" height="100">
             <div class="mx-4">
                 <h4 class="mb-3">ကျန်းမာရေးဝန်ကြီးဌာန</h4>
-                <h5 class="mb-2">မြိုနယ်ပြည်သူကျန်းမာရေး ဉီစီးဌာန (ဟင်္သာတ)</h5>
+                <h5 class="mb-2">မြိုနယ်ပြည်သူကျန်းမာရေး ဦးစီးဌာန (ဟင်္သာတ)</h5>
             </div>
         </div>
     </section>
@@ -117,7 +117,7 @@
                             </li>
                             <li class="mb-2">
                                 <i class="bx bx-phone"></i>
-                                <strong>ဖုန်း:</strong> 09-123456789, 042-12345
+                                <strong>ဖုန်း:</strong> 09-424803500
                             </li>
                             <li class="mb-2">
                                 <i class="bx bx-envelope"></i>
@@ -125,17 +125,10 @@
                             </li>
                             <li>
                                 <i class="bx bx-time"></i>
-                                <strong>ဆေးခန်းထိုင်ရက် :</strong> အင်္ဂါ၊ ကြာသပတေး (9:00AM - 4:ူ00PM)
+                                <strong>ဆေးခန်းထိုင်ရက် :</strong> အင်္ဂါ၊ ကြာသပတေး (9:00AM - 4:00PM)
                             </li>
                         </ul>
-                        <div>
-                            <a href="tel:09123456789" class="btn btn-primary me-2">
-                                <i class="bx bx-phone-call"></i> ဖုန်းခေါ်ရန်
-                            </a>
-                            <a href="mailto:info@hospital.gov.mm" class="btn btn-outline-primary">
-                                <i class="bx bx-envelope"></i> အီးမေးလ်ပို့ရန်
-                            </a>
-                        </div>
+
                     </div>
                 </div>
             </div>
