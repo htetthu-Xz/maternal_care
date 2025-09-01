@@ -35,7 +35,7 @@
                 </div>
                 <div class="col-md-4">
                     <label class="form-label">သွေးအမျိုးအစား (Blood Type)</label>
-                    <select name="father_blood_group" id="">
+                    <select name="father_blood_group" id="" class="form-select">
                         <option value="">ရွေးချယ်ပါ / Choose</option>
                         <option value="A+">A+</option>
                         <option value="A-">A-</option>

@@ -85,6 +85,14 @@
       .bg-menu-theme .menu-inner > .menu-item.active > .menu-link {
         background-color: #007bff !important;
         color: #fff !important;
+      } 
+      
+      body {
+        color: #000 !important;
+      }
+
+      .form-label {
+        color: #000 !important;
       }
     </style>
 
