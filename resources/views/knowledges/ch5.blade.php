@@ -16,6 +16,8 @@
         .logo {
             max-height: 100px;
             filter: drop-shadow(0 2px 8px rgba(0,0,0,0.08));
+            border-radius: 50%;
+            object-fit: cover;
         }
         .header-section {
             background: linear-gradient(90deg, #0d6efd 60%, #5fa8d3 100%);
@@ -85,7 +87,7 @@
 <body>
     <section class="text-center header-section text-white py-4 mb-4">
         <div class="d-flex flex-column justify-content-center align-items-center p-2">
-            <img src="{{ asset('images/logo.svg') }}" alt="Logo" class="logo mb-3" width="100" height="100">
+            <img src="{{ asset('images/logo1.png') }}" alt="Logo" class="logo mb-3" width="100" height="100">
             <div class="mx-4">
                 <h4 class="mb-3">ကျန်းမာရေးဝန်ကြီးဌာန</h4>
                 <h5 class="mb-2">မြို့နယ်ပြည်သူ့ကျန်းမာရေး ဦးစီးဌာန (ဟင်္သာတ)</h5>
